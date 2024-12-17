@@ -67,6 +67,8 @@ const Header = () => {
           transform: `rotate(${rotateAngle}deg)`, // Apply rotation to the entire container
           transition: 'transform 1s linear', // Smooth animation transition
           position: 'relative',  // Keep the circles positioned relative to the container
+          top: '-100px',
+        
         }}
       >
         {circles.map((circle, index) => (
@@ -77,7 +79,7 @@ const Header = () => {
               position: 'absolute',
               top: '50%',
               left: '50%',
-              transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(330px)`,
+              transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(320px)`,
             }}
           >
             <motion.img
@@ -89,6 +91,10 @@ const Header = () => {
         ))}
       </motion.div>
     </div>
+
+          //{/* Black rectangular block below the header */}
+    //<div className="black-rectangular-block"></div>
+    
   );
 };
 

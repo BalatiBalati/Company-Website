@@ -4,20 +4,24 @@
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent any overflow from appearing */
+}
 
-    .app__wrapper {
-        padding: 0;
+.app__wrapper {
+    padding: 0;
 
-        .copyright {
-            display: none;
-        }
+    .copyright {
+        display: none;
     }
 }
 
 .app__header {
     flex: 1;
     width: 100%;
-    height: 100%;
+    height: 0%;
     flex-direction: row;
     padding: 6rem 2rem 0;
   
@@ -33,6 +37,8 @@
       padding: 6rem 1rem 2rem;
     }
 }
+
+
   
 .app__header-circles {
     position: relative; /* Ensure circles are positioned relative to this container */
@@ -43,9 +49,9 @@
     align-items: center;
     margin-left: 1rem;
     z-index: 0;
-    top: 20%;
-    left: -38%;
-    transform: translate(-20%, 38%); /* Center it on the page */
+    bottom: -70%;
+    left: -30%;
+    transform: translate(-30%, 30%); /* Center it on the page */
   
     div {
       position: absolute;
@@ -67,19 +73,26 @@
 
 .app__header-info {
     flex: 0.65;
+    top: 60%;
+    right: 80%;
+    flex: 0.65;
     display: flex;
+    position: absolute; /* Ensure circles are positioned relative to this container */
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
+    padding: 1rem;
     z-index: 1;
 }
 
 .app__header-badge {
-    width: 100%;
+    width: auto;
+    top: -50%;
+    position: relative; /* Ensure circles are positioned relative to this container */
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
 
     .badge-cmp,
@@ -121,28 +134,30 @@
 .app__header-img {
     flex: 1;
     height: 100%;
-
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
+    padding-bottom: 15%;
 
     img {
-        width: 100%;
+        width: 80%;
         position: relative;
-        top: 155px;
+        top: 245px;
+        left: 25%;
         object-fit: contain;
         z-index: 1;
     }
 
-    .overlay_circle {
+    .overlay_circle{
         position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        left: 35%;
+        top: -310px;
         z-index: 0;
-        width: 100%;
-        height: 100%;
+        width: 550px;
+        height: 550px;
+        transform: translate(-50%, 50%);
     }
 
     @media screen and (max-width: 1200px) {
@@ -150,4 +165,13 @@
         position: relative;
         bottom: 320px;
     }
+}
+
+/* Add the black rectangular block below the header */
+.black-rectangular-block {
+    width: 100%; /* Full width */
+    height: 100px; /* Set desired height */
+    background-color: black; /* Black background */
+    position: relative;
+    z-index: -1; /* Ensure it stays beneath the header */
 }
