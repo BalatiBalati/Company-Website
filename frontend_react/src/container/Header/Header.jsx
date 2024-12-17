@@ -22,6 +22,25 @@ const Header = () => {
     return () => clearInterval(interval); // Clean up interval on component unmount
   }, []);
 
+  // State for animating stats numbers
+  const [stats, setStats] = useState({ partners: 0, projects: 0 });
+
+  useEffect(() => {
+    const animateStats = (target, duration, key) => {
+      let start = 0;
+      const increment = target / (duration / 16); // Increment per frame at ~60fps
+
+      const timer = setInterval(() => {
+        start += increment;
+        setStats((prev) => ({ ...prev, [key]: Math.min(Math.floor(start), target) }));
+        if (start >= target) clearInterval(timer);
+      }, 16);
+    };
+
+    animateStats(5, 1000, 'partners'); // Animate 'partners' to 5 in 1 second
+    animateStats(80, 1000, 'projects'); // Animate 'projects' to 80 in 1 second
+  }, []);
+
   return (
     <div className="app__header app__flex"> 
       <motion.div
@@ -67,7 +86,7 @@ const Header = () => {
           transform: `rotate(${rotateAngle}deg)`, // Apply rotation to the entire container
           transition: 'transform 1s linear', // Smooth animation transition
           position: 'relative',  // Keep the circles positioned relative to the container
-          top: '-100px',
+          top: '-60px',
         
         }}
       >
@@ -90,10 +109,26 @@ const Header = () => {
           </div>
         ))}
       </motion.div>
+
+      <div className="app__new-section">
+        <h2 className="new-section-heading">Discover My Work</h2>
+        <div className="app__stats">
+          <div className="app__stats-row">
+            <div className="app__stats-item">
+              <h3 className="stats-heading">Partners</h3>
+              <div className="stats-number">{stats.partners}</div>
+            </div>
+            <div className="app__stats-item">
+              <h3 className="stats-heading">Projects</h3>
+              <div className="stats-number">{stats.projects}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-          //{/* Black rectangular block below the header */}
-    //<div className="black-rectangular-block"></div>
+    
     
   );
 };
