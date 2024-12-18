@@ -17,9 +17,40 @@ const About = () => {
   return (
     <div className="app__about">
       <h2 className="head-text">
-        I know that <span>Good Design</span> <br />
-        means <span>Good Business</span> <br />
+        Get to know <span>Me</span> <br />
+        Get to know <span>The Company</span> <br />
       </h2>
+
+      <div className="app__rows">
+
+     
+        <div className="app__row">
+          <img 
+            src="path-to-your-image.jpg" 
+            alt="About Me" 
+          />
+          <h2>About Me</h2>
+          <p>
+            I am a passionate developer with a strong background in building 
+            dynamic and responsive web applications. I love solving complex 
+            problems and collaborating with teams to bring ideas to life.
+          </p>
+        </div>
+
+  
+        <div className="app__row">
+          <img 
+            src="path-to-company-image.jpg" 
+            alt="Chipukizi" 
+          />
+          <h2>About Chipukizi</h2>
+          <p>
+            Chipukizi is an innovative company focused on delivering 
+            cutting-edge tech solutions. Our mission is to empower businesses 
+            with tools that drive growth, efficiency, and success.
+          </p>
+        </div>
+      </div>
 
       <div className="app__profiles">
         {abouts.map((about) => (

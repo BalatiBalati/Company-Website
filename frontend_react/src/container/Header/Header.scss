@@ -46,8 +46,8 @@
     align-items: center;
     margin-left: 1rem;
     z-index: 0;
-    bottom: -70%;
-    left: -30%;
+    bottom: -65%;
+    left: -32.5%;
     transform: translate(-30%, 30%); /* Center it on the page */
   
     div {
@@ -72,7 +72,6 @@
     flex: 0.65;
     top: 60%;
     right: 80%;
-    flex: 0.65;
     display: flex;
     position: absolute; /* Ensure circles are positioned relative to this container */
     flex-direction: column;
@@ -86,6 +85,7 @@
 .app__header-badge {
     width: auto;
     top: -50%;
+    right: -70%;
     position: relative; /* Ensure circles are positioned relative to this container */
     display: flex;
     justify-content: flex-start;
@@ -152,8 +152,8 @@
         left: 35%;
         top: -260px;
         z-index: 0;
-        width: 550px;
-        height: 550px;
+        width: 500px;
+        height: 500px;
         transform: translate(-50%, 50%);
     }
 
@@ -165,9 +165,10 @@
 }
 
 .app__new-section {
-    width: 100%;
+    width: 95%;
     position: absolute;
-    bottom: -15px;
+    left: 5%;
+    bottom: -1.0px;
     padding: 1.9rem 2rem;
     z-index: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(200, 200, 200) 40%); /* Gradient goes from transparent to solid horizontally */

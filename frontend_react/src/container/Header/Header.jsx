@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { images } from '../../constants'; // Ensure these images are imported
 import './Header.scss';
@@ -50,7 +49,7 @@ const Header = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
+            <span>😉</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hi there! My name is</p>
               <h1 className="head-text">Balati</h1>
@@ -86,7 +85,7 @@ const Header = () => {
           transform: `rotate(${rotateAngle}deg)`, // Apply rotation to the entire container
           transition: 'transform 1s linear', // Smooth animation transition
           position: 'relative',  // Keep the circles positioned relative to the container
-          top: '-60px',
+          top: '-70px',
         
         }}
       >
@@ -98,7 +97,7 @@ const Header = () => {
               position: 'absolute',
               top: '50%',
               left: '50%',
-              transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(320px)`,
+              transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(240px)`,
             }}
           >
             <motion.img
@@ -134,7 +133,7 @@ const Header = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Header, 'app__header'),
+  MotionWrap(Header, 'app__header app__flex'),
   'header',
   'app__primary'
 );

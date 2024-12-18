@@ -28,7 +28,7 @@ const Skills = () => {
 
   return (
     <>
-      <div className="app">
+      <div className="app__skills">
         <h2 className="head-text">Skills & Experience</h2>
 
         <div className="app__skills-container">
@@ -44,6 +44,17 @@ const Skills = () => {
                   <img src={urlFor(skill.icon)} alt={skill.name} />
                 </div>
                 <p className="p-text">{skill.name}</p>
+
+                <div className="app__skills-progress-bar">
+                  <motion.div
+                    className="progress-bar"
+                    initial={{ width: '0%' }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1.5, ease: 'easeOut' }}
+                    style={{ backgroundColor: skill.bgColor }}
+                  />
+                </div>
+                <p className="progress-percentage">{skill.level}%</p>
               </motion.div>
             ))}
           </motion.div>

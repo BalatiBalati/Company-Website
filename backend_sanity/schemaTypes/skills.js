@@ -27,5 +27,12 @@ export const skills = defineType({
               hotspot: true,
             },
         }),
+
+        defineField({
+            name: 'level',
+            title: 'Proficiency Level (%)',
+            type: 'number',
+            validation: (Rule) => Rule.min(0).max(100),
+        })
     ],
 })
