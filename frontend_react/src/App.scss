@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
 
-
+/* App Layout */
 .app {
   background-color: var(--primary-color);
   font-family: var(--font-base);
+  scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 .app__whitebg {

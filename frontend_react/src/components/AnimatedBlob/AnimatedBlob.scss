@@ -1,0 +1,25 @@
+.app__blob {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: blobAnimation 4s infinite;
+    pointer-events: none;
+  }
+  
+  @keyframes blobAnimation {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  

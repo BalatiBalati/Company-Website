@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+//import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import { Eye, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -77,7 +78,7 @@ const Work = () => {
                     transition={{duration: 0.25}}
                     className="app__flex"
                   >
-                    <AiFillEye />
+                    <Eye />
                   </motion.div>
                 </a>
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
@@ -87,7 +88,7 @@ const Work = () => {
                     transition={{duration: 0.25}}
                     className="app__flex"
                   >
-                    <AiFillGithub />
+                    <Github />
                   </motion.div>
                 </a>
               </motion.div>
