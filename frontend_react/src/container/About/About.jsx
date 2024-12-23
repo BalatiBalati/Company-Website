@@ -25,10 +25,6 @@ const About = () => {
 
      
         <div className="app__row">
-          <img 
-            src="path-to-your-image.jpg" 
-            alt="About Me" 
-          />
           <h2>About Me</h2>
           <p>
             I am a passionate developer with a strong background in building 
@@ -39,10 +35,6 @@ const About = () => {
 
   
         <div className="app__row">
-          <img 
-            src="path-to-company-image.jpg" 
-            alt="Chipukizi" 
-          />
           <h2>About Chipukizi</h2>
           <p>
             Chipukizi is an innovative company focused on delivering 

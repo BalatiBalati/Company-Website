@@ -1,25 +1,73 @@
-.app__blob {
+/* AnimatedBlob.scss */
+
+/* Position the blobs to float across the entire viewport */
+.animated-blob {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    animation: blobAnimation 4s infinite;
-    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Ensure blobs don't block user interactions */
+    z-index: -1; /* Ensure blobs appear on top */
+    overflow: hidden; /* Prevent blobs from overflowing outside the viewport */
   }
   
-  @keyframes blobAnimation {
-    0% {
-      transform: translate(-50%, -50%) scale(1);
+  .blob {
+    position: absolute;
+    width: 100px; /* Adjust size of blob */
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5); /* Example color */
+    border-radius: 50%;
+    animation: float 10s ease-in-out infinite, randomPosition 15s infinite;
+  
+    /* Animation for floating effect */
+    @keyframes float {
+      0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(30px, 30px); /* Adjust movement */
+      }
+      100% {
+        transform: translate(0, 0);
+      }
     }
-    50% {
-      transform: translate(-50%, -50%) scale(1.2);
+  
+    /* Animation for random movement across the viewport */
+    @keyframes randomPosition {
+      0% {
+        top: 20%;
+        left: 20%;
+      }
+      25% {
+        top: 10%;
+        left: 80%;
+      }
+      50% {
+        top: 70%;
+        left: 50%;
+      }
+      75% {
+        top: 40%;
+        left: 30%;
+      }
+      100% {
+        top: 60%;
+        left: 60%;
+      }
     }
-    100% {
-      transform: translate(-50%, -50%) scale(1);
+  
+    /* Randomize positions with delays for each blob */
+    &:nth-child(1) {
+      animation-delay: 0s;
+    }
+  
+    &:nth-child(2) {
+      animation-delay: 3s;
+    }
+  
+    &:nth-child(3) {
+      animation-delay: 6s;
     }
   }
   

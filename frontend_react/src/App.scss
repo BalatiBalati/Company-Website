@@ -5,6 +5,14 @@
   transition: all 0.3s ease-in-out;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  position: relative;
+}
+
 /* App Layout */
 .app {
   background-color: var(--primary-color);
@@ -13,7 +21,7 @@
 }
 
 .app__whitebg {
-  background-color: var(--white-color);
+  background-color: var(--deep-color);
 }
 
 .app__primarybg {
@@ -64,7 +72,7 @@
   font-size: 2.75rem;
   font-weight: 800;
   text-align: center;
-  color: var(--black-color);
+  color: var(--white-color);
   text-transform: capitalize;
 
   span {
