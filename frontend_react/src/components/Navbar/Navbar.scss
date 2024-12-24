@@ -11,13 +11,14 @@
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
-    z-index: 2;
+    z-index: 10000;
 }
 
 .app__navbar-logo{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 10000;
 
     img {
         width: 150px;
@@ -35,6 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10000;
 
     list-style: none;
 
@@ -85,15 +87,18 @@
     height: 35px;
     border-radius: 50%;
     position: relative;
+    z-index: 10000;
 
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--secondary-color);
+    z-index: 10000;
 
     svg{
         width: 70%;
         height: 70%;
+        z-index: 10000;
         color: var(--white-color);
     }
 
@@ -102,7 +107,7 @@
         top: 0;
         bottom: 0;
         right: 0;
-        z-index: 5;
+        z-index: 10000;
 
         padding: 1rem;
 

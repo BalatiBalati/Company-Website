@@ -5,7 +5,7 @@
     width: 20px;
     height: 20px;
     background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 102, 255, 0.884);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
@@ -16,13 +16,13 @@
   .custom-cursor--click {
     width: 40px;
     height: 40px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 238, 247, 0.8);
   }
   
   .custom-cursor--hover {
     width: 30px;
     height: 30px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 102, 255, 0.678);
   }
   
   .custom-cursor--hidden {

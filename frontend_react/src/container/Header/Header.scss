@@ -11,7 +11,11 @@
     padding: 0;
 
     .copyright {
-        display: none;
+        display: block; /* Ensures the copyright section is visible */
+        text-align: right; /* Optional: Aligns the text to the center */
+        font-size: 14px; /* Optional: Adjust the font size */
+        margin-top: 20px; /* Optional: Adds spacing above the copyright */
+        color: #777; /* Optional: Sets a subtle color */
     }
 }
 
@@ -137,21 +141,22 @@
     align-items: flex-end;
     position: relative;
     padding-bottom: 15%;
+    z-index: 0;
 
     img {
         width: 80%;
         position: relative;
-        top: 280px;
+        top: 380px;
         left: 20%;
         object-fit: contain;
-        z-index: 1;
+        z-index: 0;
     }
 
     .overlay_circle{
         position: absolute;
         left: 35%;
-        top: -260px;
-        z-index: 0;
+        top: -280px;
+        z-index: -1;
         width: 500px;
         height: 500px;
         transform: translate(-50%, 50%);

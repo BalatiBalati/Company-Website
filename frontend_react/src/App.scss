@@ -56,6 +56,7 @@ body, html {
 .copyright {
   width: 100%;
   padding: 2rem 0 0;
+  z-index: 10000;
 
   display: flex;
   flex-direction: column;
@@ -119,6 +120,7 @@ body, html {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  z-index: 10000;
 
   padding: 1rem;
 
@@ -170,6 +172,7 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 10000;
 
   padding: 1rem;
 

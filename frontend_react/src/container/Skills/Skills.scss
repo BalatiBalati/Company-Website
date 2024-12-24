@@ -50,7 +50,7 @@
         width: 90px;
         height: 90px;
         border-radius: 50%;
-        background-color: #daf6ff;
+        background-color: #00bfffbb;
 
         img {
             width: 50%;
@@ -72,7 +72,7 @@
         width: 100%;
         max-width: 120px;
         height: 10px;
-        background-color: #f0f0f0; /* Light gray background */
+        background-color: #e7e6e6f1; /* Light gray background */
         border-radius: 5px;
         overflow: hidden;
 
@@ -86,7 +86,7 @@
         font-size: 12px;
         font-weight: bold;
         margin-top: 5px;
-        color: #555;
+        color: #ffffff;
     }
 }
 
@@ -127,7 +127,7 @@
 .skills-tooltip {
     max-width: 300px !important;
     background-color: var(--white-color) !important;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.637) !important;
     border-radius: 5px !important;
     padding: 1rem !important;
     color: var(--gray-color) !important;
