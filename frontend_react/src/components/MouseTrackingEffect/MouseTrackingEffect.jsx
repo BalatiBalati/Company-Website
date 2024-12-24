@@ -8,7 +8,7 @@ const MouseTrackingEffect = () => {
 
     layers.forEach((layer) => {
       const randomX = Math.random() * 100;
-      const randomY = Math.random() * 300;
+      const randomY = Math.random() * 200;
       const randomDelay = Math.random() * 2; // Random delay for each blob
 
       layer.style.animationDelay = `${randomDelay}s`;

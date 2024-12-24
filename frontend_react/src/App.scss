@@ -5,6 +5,18 @@
   transition: all 0.3s ease-in-out;
 }
 
+.navbar, .about, .work, .skills, .testimonials, .footer {
+  position: relative;
+  z-index: 10; /* Keep the other sections on top of blobs */
+}
+
+.animated-blob {
+  position: absolute; /* This allows free movement of blobs */
+  z-index: -1; /* Keep blobs below the header and other sections */
+}
+
+
+
 body, html {
   margin: 0;
   padding: 0;
@@ -18,6 +30,9 @@ body, html {
   background-color: var(--primary-color);
   font-family: var(--font-base);
   scroll-behavior: smooth; /* Enable smooth scrolling */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .app__whitebg {
