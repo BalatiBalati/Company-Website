@@ -104,6 +104,24 @@ body, html {
   }
 }
 
+.body-text {
+  text-align: center;
+  color: var(--white-color);
+  text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
 .p-text {
   font-size: 0.8rem;
   text-align: left;
@@ -118,7 +136,7 @@ body, html {
 .bold-text {
   font-size: 1rem;
   font-weight: 800;
-  color: var(--black-color);
+  color: white;
   text-align: left;
 
   @media screen and (min-width: 2000px) {

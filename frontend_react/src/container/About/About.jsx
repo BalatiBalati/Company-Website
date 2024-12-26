@@ -17,19 +17,22 @@ const About = () => {
   return (
     <div className="app__about">
       <h2 className="head-text">
-        Get to know <span>Me</span> <br />
-        Get to know <span>The Company</span> <br />
+        <br></br>
+        <br></br>
+        Get to know <span> & Me The Company</span> <br />
       </h2>
 
       <div className="app__rows">
-
-     
         <div className="app__row">
           <h2>About Me</h2>
-          <p>
-            I am a passionate developer with a strong background in building 
-            dynamic and responsive web applications. I love solving complex 
-            problems and collaborating with teams to bring ideas to life.
+          <p className="body-text">
+            I'm a software development and AI enthusiast, with a passion for merging cutting-edge technology with creative flair.  
+            Whether creating software solutions, crafting eye-catching animations, designing 
+            intuitive websites, or time capsuling moments through videography and photography;  
+            <br></br>I enjoy bringing ideas to life in unexpected ways. <br></br>For me, every project is an exciting opportunity to innovate. 
+            <br></br>
+            <span><b>So, Let us cultivate a thriving digital landscape together.</b></span>
+            
           </p>
         </div>
 
@@ -37,13 +40,14 @@ const About = () => {
         <div className="app__row">
           <h2>About Chipukizi</h2>
           <p>
-            Chipukizi is an innovative company focused on delivering 
-            cutting-edge tech solutions. Our mission is to empower businesses 
-            with tools that drive growth, efficiency, and success.
+
           </p>
         </div>
       </div>
 
+      <h2 className="head-text">
+        Available <span>Services</span>
+      </h2>
       <div className="app__profiles">
         {abouts.map((about) => (
           <motion.div 

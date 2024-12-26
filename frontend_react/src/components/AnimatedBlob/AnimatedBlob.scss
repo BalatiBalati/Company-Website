@@ -6,7 +6,7 @@
   background: linear-gradient(to right, rgba(0, 204, 255, 0.753), rgba(255, 255, 255, 0.329)); // Gradient styling
   mix-blend-mode: screen; // Blend mode for glowing effect
   filter: blur(20px); // Smooth blur
-  z-index: 3; // Ensure blobs are always visible
+  z-index: -1; // Ensure blobs are always visible
   border-radius: 50%; // Smooth edges for blobs
   pointer-events: none; // Prevent interaction with the blob
   animation-timing-function: ease-in-out;
