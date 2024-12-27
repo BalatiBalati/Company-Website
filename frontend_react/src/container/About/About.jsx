@@ -15,53 +15,49 @@ const About = () => {
   }, []);
 
   return (
-    <div className="app__about">
-      <h2 className="head-text">
-        <br></br>
-        <br></br>
-        Get to know <span> & Me The Company</span> <br />
-      </h2>
+    <div className="app__about-wrapper">
+      <div className="app__about">
+        <h2 className="head-text">
+          <br />
+          Get to know <span> Me & The Company</span> 
+        </h2>
 
-      <div className="app__rows">
-        <div className="app__row">
-          <h2>About Me</h2>
-          <p className="body-text">
-            I'm a software development and AI enthusiast, with a passion for merging cutting-edge technology with creative flair.  
-            Whether creating software solutions, crafting eye-catching animations, designing 
-            intuitive websites, or time capsuling moments through videography and photography;  
-            <br></br>I enjoy bringing ideas to life in unexpected ways. <br></br>For me, every project is an exciting opportunity to innovate. 
-            <br></br>
-            <span><b>So, Let us cultivate a thriving digital landscape together.</b></span>
-            
-          </p>
+        <div className="app__rows">
+          <div className="app__row body-text">
+          <span><h2>About Me</h2></span>
+            <p className="body-text">
+              I'm a <b><span>software development</span></b> and <b><span>AI enthusiast</span></b>, with a passion for merging cutting-edge technology with creative flair.  
+              Whether creating <b><span>software solutions</span></b>, crafting eye-catching <b><span>animations</span></b>, designing intuitive <b><span>websites</span></b>, or time-capsuling moments through <b><span>videography</span></b> and <b><span>photography</span></b>;  
+              <br />
+              I enjoy bringing ideas to life in unexpected ways. <br />
+              <span><b>So, Let us cultivate a thriving digital landscape together.</b></span>
+            </p>
+          </div>
+
+          <div className="app__row body-text">
+            <span><h2>About Chipukizi</h2></span>
+            <p></p>
+          </div>
         </div>
 
-  
-        <div className="app__row">
-          <h2>About Chipukizi</h2>
-          <p>
-
-          </p>
+        <h2 className="head-text">
+          Available <span>Services</span>
+        </h2>
+        <div className="app__profiles">
+          {abouts.map((about) => (
+            <motion.div 
+              whileInView={{ opacity: 1 }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.5, type: 'tween' }}
+              className="app__profile-item"
+              key={about._id}
+            >
+              <img src={urlFor(about.imgUrl)} alt={about.title} />
+              <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
+              <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
+            </motion.div> 
+          ))}
         </div>
-      </div>
-
-      <h2 className="head-text">
-        Available <span>Services</span>
-      </h2>
-      <div className="app__profiles">
-        {abouts.map((about) => (
-          <motion.div 
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: 'tween' }}
-            className="app__profile-item"
-            key={about._id}
-          >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
-            <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
-          </motion.div> 
-        ))}
       </div>
     </div>
   );
