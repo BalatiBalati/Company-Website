@@ -33,6 +33,15 @@ export const works = defineType({
         }),
 
         defineField({
+            name: 'videoUrl',
+            title: 'Video',
+            type: 'file',
+            options: {
+              accept: 'video/*',
+            }
+        }),
+
+        defineField({
             name: 'imgUrl',
             title: 'ImageUrl',
             type: 'image',
@@ -55,3 +64,6 @@ export const works = defineType({
         }),
     ],
 })
+
+
+

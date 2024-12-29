@@ -26,17 +26,18 @@ const About = () => {
           <div className="app__row body-text">
           <span><h2>About Me</h2></span>
             <p className="body-text">
-              I'm a <b><span>software development</span></b> and <b><span>AI enthusiast</span></b>, with a passion for merging cutting-edge technology with creative flair.  
+              I am a <b><span>software development</span></b> and <b><span>AI enthusiast</span></b>, with a passion for merging cutting-edge technology with creative flair.  
               Whether creating <b><span>software solutions</span></b>, crafting eye-catching <b><span>animations</span></b>, designing intuitive <b><span>websites</span></b>, or time-capsuling moments through <b><span>videography</span></b> and <b><span>photography</span></b>;  
               <br />
-              I enjoy bringing ideas to life in unexpected ways. <br />
-              <span><b>So, Let us cultivate a thriving digital landscape together.</b></span>
+              <br />
+              <span><b>I enjoy bringing ideas to life in unexpected ways. <br /></b></span>
+              
             </p>
           </div>
 
           <div className="app__row body-text">
             <span><h2>About Chipukizi</h2></span>
-            <p></p>
+            <p><span><b>So, Let us cultivate a thriving digital landscape together.</b></span></p>
           </div>
         </div>
 

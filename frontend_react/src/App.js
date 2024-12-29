@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 
-import { Header, About, Footer, Work, Skills, Testimonials } from "./container";
+import { Header, About, Footer, Work, Skills} from "./container";
 import { Navbar } from "./components";
 import AnimatedBlob from "./components/AnimatedBlob/AnimatedBlob";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
@@ -29,7 +29,7 @@ const App = () => {
       <About />
       <Work />
       <Skills />
-      <Testimonials />
+      {/*<Testimonials />*/}
       <Footer />
     </div>
   );
