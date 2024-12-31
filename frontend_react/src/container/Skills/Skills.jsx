@@ -27,9 +27,9 @@ const Skills = () => {
   }, []);
 
   return (
-    <>
-      <div className="app__skills">
-        <h2 className="head-text">Skills & Experience</h2>
+    <div className="skills__app-wrapper">
+      <div className="app__skills body-text">
+        <h2 className="head-text">Skills <span>& Experience</span></h2>
 
         <div className="app__skills-container">
           <motion.div className="app__skills-list">
@@ -96,7 +96,7 @@ const Skills = () => {
           </motion.div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

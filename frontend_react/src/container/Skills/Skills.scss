@@ -1,3 +1,19 @@
+/* Add a wrapper for the cyan box */
+.skills__app-wrapper {
+    background-color: rgba(3, 85, 110, 0.479);  /* Set background color to cyan */
+    padding-right: 4rem;     
+    padding-left: 4rem;        /* Add padding around the content */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: 15px;      /* Optional rounded corners */
+    position: relative;
+    top: 6.75%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.459); /* Optional box shadow for a subtle effect */
+    width: 100%;              /* Ensure it spans full width */
+    max-width: 1500px;        /* Optional, limit the maximum width */
+    margin: 2rem auto;        /* Center the box horizontally with margin */
+}
+
 .head-text {
     margin-bottom: 2rem; // Space below the heading
     text-align: center; // Center alignment
@@ -29,7 +45,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin-right: 5rem;
+    margin-right: -10rem;
 
     @media screen and (max-width: 900px) {
         margin-right: 0;
@@ -96,6 +112,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    position: relative;
+    left: 37%;
 
     @media screen and (max-width: 900px) {
         margin-top: 2rem;
