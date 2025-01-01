@@ -15,8 +15,6 @@
   z-index: -1; /* Keep blobs below the header and other sections */
 }
 
-
-
 body, html {
   margin: 0;
   padding: 0;
@@ -38,6 +36,19 @@ body, html {
 .app__whitebg {
   background-color: var(--deep-color);
 }
+
+.app__bgImage{
+  background-image: url('../src/assets/bgIMG.png'); /* Replace with the correct image path */
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  height: 100vh; /* Ensures it fills the entire viewport height */
+  width: 100vw; /* Ensures it fills the entire viewport width */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrollbars if the image overflows */
+}
+
 
 .app__primarybg {
   background-color: var(--primary-color);

@@ -2,127 +2,142 @@
     flex: 1;
     width: 100%;
     flex-direction: column;
-    background-color: #ffff; /* Background color for the footer */
-    padding: 2rem; /* Added padding for spacing */
-}
-
-.head-text {
-    text-align: center; /* Center the header text */
-    margin-bottom: 2rem; /* Space below the heading */
-}
-
-.app__footer-cards {
-    width: 80%; /* Adjusted width for better spacing */
-    display: flex; /* Use flexbox to arrange items */
-    justify-content: space-between; /* Space the cards evenly */
-    align-items: center; /* Center items vertically */
-    margin: 0 auto; /* Center the footer cards */
-    margin-left: 10%; /* Move the cards to the left by adding a left margin */
-    
+    padding: 2rem; /* Spacing for footer content */
+    position: relative; /* Required for overlay and positioning */
+    background-color: rgba(221, 221, 221, 0.151); /* Path to the background image */
+    background-size: cover; /* Cover the entire footer area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition of the image */
+    color: #565d61; /* Adjust text color for contrast */
+  
+    /* Overlay for better text visibility */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0); /* Semi-transparent overlay */
+      z-index: -1; /* Places overlay behind content */
+    }
+  }
+  
+  .head-text {
+    text-align: center;
+    margin-bottom: 2rem; /* Spacing below the heading */
+    color: #fff; /* Ensure text is visible over background */
+  }
+  
+  .app__footer-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-left: 0.75%; /* Adjust cards alignment */
+  
     .app__footer-card {
-        flex: 1; /* Allow cards to grow and fill available space */
-        min-width: 250px; /* Set a minimum width for the cards */
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-
-        margin: 1rem; /* Horizontal and vertical spacing */
-        padding: 1rem;
-        border-radius: 10px;
-        cursor: pointer;
-        background-color: #fef4f5;
-
-        transition: all 0.3s ease-in-out;
-
-        img {
-            width: 40px;
-            height: 40px;
-            margin: 0 0.7rem;
-        }
-
-        p {
-            font-weight: 600;
-        }
-
-        a {
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        &:hover {
-            box-shadow: 0 0 25px #fef4f5;
-        }
-
-        @media screen and (max-width: 450px) {
-            width: 100%;
-        }
-    }
-
-    @media screen and (max-width: 450px) {
-        width: 100%;
-    }
-
-    .app__footer-card:last-child {
-        background-color: #f2f7fb; /* Last card styling */
-    }
-}
-
-.app__footer-form {
-    width: 80%; /* Match the width of the footer cards */
-    display: flex; /* Ensure it's a flex container */
-    flex-direction: column;
-    margin: 1rem auto; /* Center the form and add margin */
-
-    div {
-        width: 100%;
-        margin: 0.76rem 0;
-        border-radius: 10px;
-        cursor: pointer;
-        background-color: var(--primary-color);
-
-        transition: all 0.3s ease-in-out;
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.95rem;
-            border: none;
-            border-radius: 7px;
-            background-color: var(--primary-color);
-
-            font-family: var(--font-base);
-            color: var(--secondary-color);
-            outline: none;
-        }
-
-        textarea {
-            height: 170px;
-        }
-
-        &:hover {
-            box-shadow: 0 0 25px var(--primary-color);
-        }
-    }
-
-    button {
-        padding: 1rem 2rem;
-        border-radius: 10px;
-        border: none;
-        background-color: var(--secondary-color);
-
+      flex: 1;
+      min-width: 400px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+  
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #d4d8dd;
+  
+      transition: all 0.3s ease-in-out;
+  
+      img {
+        width: 40px;
+        height: 40px;
+        margin: 0 0.7rem;
+      }
+  
+      p {
+        font-weight: 600;
+      }
+  
+      a {
+        text-decoration: none;
         font-weight: 500;
-        color: var(--white-color);
-        outline: none;
-        margin: 2rem 0 0 0;
-        font-family: var(--font-base);
-        cursor: pointer;
-
-        transition: all 0.3s ease-in-out; /* Added transition for button */
-    }
-
-    @media screen and (max-width: 768px) {
+      }
+  
+      &:hover {
+        box-shadow: 0 0 25px #fef4f5;
+      }
+  
+      @media screen and (max-width: 450px) {
         width: 100%;
-        margin: 1rem 0;
+      }
     }
-}
+  
+    @media screen and (max-width: 450px) {
+      width: 100%;
+    }
+  
+    .app__footer-card:last-child {
+        background-color: #d4d8dd;
+    }
+  }
+  
+  .app__footer-form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+  
+    div {
+      width: 100%;
+      margin: 0.76rem 0;
+      border-radius: 10px;
+      background-color: var(--primary-color);
+  
+      transition: all 0.3s ease-in-out;
+  
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.95rem;
+        border: none;
+        border-radius: 7px;
+        background-color: var(--primary-color);
+        font-family: var(--font-base);
+        color: var(--secondary-color);
+        outline: none;
+      }
+  
+      textarea {
+        height: 170px;
+      }
+  
+      &:hover {
+        box-shadow: 0 0 25px var(--primary-color);
+      }
+    }
+  
+    button {
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      border: none;
+      background-color: var(--secondary-color);
+      font-weight: 500;
+      color: var(--white-color);
+      outline: none;
+      margin: 2rem 0 0 0;
+      font-family: var(--font-base);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+  
