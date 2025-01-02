@@ -22,6 +22,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center; /* Center content horizontally */
+    margin-top: -1rem;
 }
 
 .app__profiles {
@@ -41,7 +42,7 @@
     width: 100%;
     z-index: 9999;
     max-width: 1400px; /* Limit maximum width */
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 .app__row {

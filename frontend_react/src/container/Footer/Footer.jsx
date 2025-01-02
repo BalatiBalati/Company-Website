@@ -109,4 +109,4 @@ const Footer = () => {
 };
 
 export default AppWrap(
-MotionWrap(Footer, 'app__footer'),'contact', "app__bgImage");
+MotionWrap(Footer, 'app__footer'),'contact', "app__bgImage", ['contact', 'footer']);

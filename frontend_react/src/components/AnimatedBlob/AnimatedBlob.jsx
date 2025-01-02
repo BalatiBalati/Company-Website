@@ -5,7 +5,7 @@ import "./AnimatedBlob.scss";
 const AnimatedBlob = ({ motionType }) => {
   // Generate a random starting position
   const randomPosition = {
-    top: `${Math.random() * 550}vh`, // Random starting position vertically
+    top: `${Math.random() * 350}vh`, // Random starting position vertically
     left: `${Math.random() * 100}vw`, // Random horizontal starting position
   };
 
@@ -21,7 +21,7 @@ const AnimatedBlob = ({ motionType }) => {
 
   // Get random path for vertical-only movement
   const getVerticalPath = () => {
-    const spreadY = 1000; // Vertical spread for up and down motion
+    const spreadY = 900; // Vertical spread for up and down motion
     return [
       -spreadY + Math.random() * spreadY * 1, // Vertical motion only
     ];

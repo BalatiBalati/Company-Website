@@ -51,8 +51,8 @@ const Header = () => {
           <div className="badge-cmp app__flex">
             <span>😉</span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text">Hi there! My name is</p>
-              <h1 className="head-text">Balati</h1>
+              <p className="body-text">Hi there! My name is</p>
+              <h1 className="head-text"><span>Balati</span></h1>
             </div>
           </div>
 
@@ -133,7 +133,4 @@ const Header = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Header, 'app__header app__flex'),
-  'header',
-  'app__primary'
-);
+  MotionWrap(Header, 'app__header app__flex'), 'header', 'app__primary');

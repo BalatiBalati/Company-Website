@@ -1,14 +1,156 @@
 .app__footer {
-    flex: 1;
-    width: 100%;
-    flex-direction: column;
-    padding: 2rem; /* Spacing for footer content */
-    position: relative; /* Required for overlay and positioning */
-    background-color: rgba(221, 221, 221, 0.151); /* Path to the background image */
-    background-size: cover; /* Cover the entire footer area */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repetition of the image */
-    color: #565d61; /* Adjust text color for contrast */
+    .app__footer {
+        flex: 1;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        padding: 2rem; /* Spacing for footer content */
+        position: relative; /* Required for overlay and positioning */
+        background-color: rgba(200, 200, 200, 0.082); /* Path to the background image */
+        background-size: cover; /* Cover the entire footer area */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent repetition of the image */
+        color: #565d61; /* Adjust text color for contrast */
+        top: 0%;
+        left: 0%;
+        box-sizing: border-box; /* Include padding in dimensions */
+        display: flex; /* Flexbox for internal layout */
+        justify-content: flex-start; /* Content aligned to the top inside footer */
+        align-items: center; /* Center content horizontally */
+        z-index: 10000; /* Keep the footer behind other content */
+    
+    
+        /* Overlay for better text visibility */
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(200, 200, 200, 0.082); /* Path to the background image */
+          z-index: -1; /* Places overlay behind content */
+        }
+      }
+      
+      .head-text {
+        text-align: center;
+        margin-bottom: 2rem; /* Spacing below the heading */
+        color: #fff; /* Ensure text is visible over background */
+      }
+      
+      .app__footer-cards {
+        width: 40vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-left: 0.75%; /* Adjust cards alignment */
+      
+        .app__footer-card {
+          flex: 1;
+          min-width: 400px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+      
+          margin: 1rem;
+          padding: 1rem;
+          border-radius: 10px;
+          cursor: pointer;
+          background-color:  var(--secondary-color);
+      
+          transition: all 0.3s ease-in-out;
+      
+          img {
+            width: 40px;
+            height: 40px;
+            margin: 0 0.7rem;
+          }
+      
+          p {
+            font-weight: 600;
+          }
+      
+          a {
+            text-decoration: none;
+            font-weight: 500;
+          }
+      
+          &:hover {
+            box-shadow: 0 0 25px #fef4f5;
+          }
+      
+          @media screen and (max-width: 450px) {
+            width: 100%;
+          }
+        }
+      
+        @media screen and (max-width: 450px) {
+          width: 100%;
+        }
+      
+        .app__footer-card:last-child {
+            background-color: var(--secondary-color);
+        }
+      }
+      
+      .app__footer-form {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem auto;
+      
+        div {
+          width: 40vw;
+          margin: 0.76rem 0;
+          border-radius: 10px;
+          background-color: var(--primary-color);
+      
+          transition: all 0.3s ease-in-out;
+      
+          input,
+          textarea {
+            width: 40vw;
+            padding: 0.95rem;
+            border: none;
+            border-radius: 7px;
+            background-color: var(--primary-color);
+            font-family: var(--font-base);
+            color: var(--secondary-color);
+            outline: none;
+          }
+      
+          textarea {
+            height: 170px;
+          }
+      
+          &:hover {
+            box-shadow: 0 0 25px var(--primary-color);
+          }
+        }
+      
+        button {
+          padding: 1rem 2rem;
+          border-radius: 10px;
+          border: none;
+          background-color: var(--secondary-color);
+          font-weight: 500;
+          color: var(--white-color);
+          outline: none;
+          margin: 2rem 0 0 0;
+          font-family: var(--font-base);
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+      
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          margin: 1rem 0;
+        }
+      }
+      
   
     /* Overlay for better text visibility */
     &::before {
@@ -18,7 +160,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgb(0, 0, 0); /* Semi-transparent overlay */
+      background-color: rgba(200, 200, 200, 0.082); /* Path to the background image */
       z-index: -1; /* Places overlay behind content */
     }
   }
@@ -30,7 +172,7 @@
   }
   
   .app__footer-cards {
-    width: 100%;
+    width: 40vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,7 +191,7 @@
       padding: 1rem;
       border-radius: 10px;
       cursor: pointer;
-      background-color: #d4d8dd;
+      background-color:  var(--secondary-color);
   
       transition: all 0.3s ease-in-out;
   
@@ -82,18 +224,18 @@
     }
   
     .app__footer-card:last-child {
-        background-color: #d4d8dd;
+        background-color: var(--secondary-color);
     }
   }
   
   .app__footer-form {
-    width: 30%;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     margin: 1rem auto;
   
     div {
-      width: 100%;
+      width: 40vw;
       margin: 0.76rem 0;
       border-radius: 10px;
       background-color: var(--primary-color);
@@ -102,7 +244,7 @@
   
       input,
       textarea {
-        width: 100%;
+        width: 40vw;
         padding: 0.95rem;
         border: none;
         border-radius: 7px;
