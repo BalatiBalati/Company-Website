@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
+import { FaFacebookF } from 'react-icons/fa';
+import SocialMedia from '../../components/SocialMedia';
 import { client } from '../../sanity/client';
 import './Footer.scss';
 
@@ -98,12 +101,20 @@ const Footer = () => {
           </button>
 
           {error && <p className="error-text">{error}</p>}
+
         </div>
       ) : (
         <div>
           <h3 className="head-text"><span>Thank You For Getting In Touch</span></h3>
         </div>
       )}
+
+      <SocialMedia />
+
+      <div className="copyright">
+        <p className="p-text"><span>Copyright © 2024 BALATI BALATI</span></p>
+        <p className="p-text"><span>All Rights Reserved</span></p>
+      </div>
     </div>
   );
 };
