@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
-import { FaFacebookF } from 'react-icons/fa';
 import SocialMedia from '../../components/SocialMedia';
 import { client } from '../../sanity/client';
 import './Footer.scss';
