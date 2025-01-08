@@ -21,6 +21,9 @@ body, html {
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scroll */
   position: relative;
+  font-family: var(--font-base);  /* Ensure Montserrat is applied */
+  font-weight: 400; /* Normal weight for body text */
+  text-transform: uppercase; /* Ensure text is capitalized */
 }
 
 /* App Layout */
@@ -47,7 +50,7 @@ body, html {
   margin: 0;
   padding: 0;
   overflow: hidden; /* Prevents scrollbars if the image overflows */
-  //z-index: 9999;
+  z-index: 9999;
 }
 
 

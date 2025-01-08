@@ -7,8 +7,12 @@ import './Header.scss';
 const Header = () => {
   const circles = [
     { image: images.flutter, angleOffset: 0 },
-    { image: images.redux, angleOffset: 120 },
+    { image: images.redux, angleOffset: 60 },
+    { image: images.sass, angleOffset: 120 },
+    { image: images.flutter, angleOffset:240 },
+    { image: images.redux, angleOffset: 300 },
     { image: images.sass, angleOffset: 240 },
+    { image: images.sass, angleOffset: -60 },
   ];
 
   const [rotateAngle, setRotateAngle] = useState(0);
@@ -42,6 +46,10 @@ const Header = () => {
 
   return (
     <div className="app__header app__flex"> 
+
+      <div className="app__header-bg">
+        <img src={images.bgIMG} className="app__header-bg-img" />
+      </div>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}

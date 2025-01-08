@@ -11,10 +11,9 @@ const App = () => {
   return (
     <div className="app relative w-screen h-screen overflow-hidden">
       {/* Mouse tracking effect */}
-      <MouseTrackingEffect />
-      
+      {/*<MouseTrackingEffect />*/}
       {/* Custom Cursor */}
-      <CustomCursor />
+      {/*<CustomCursor />*/}
       
       {/* Render animated blobs in a separate container */}
       <div className="blob-container">
