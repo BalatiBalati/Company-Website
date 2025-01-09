@@ -118,15 +118,15 @@ const Header = () => {
       </motion.div>
 
       <div className="app__new-section">
-        <h2 className="new-section-heading">Discover My Work</h2>
+        <h2 className="new-section-heading">DISCOVER MY WORK</h2>
         <div className="app__stats">
           <div className="app__stats-row">
             <div className="app__stats-item">
-              <h3 className="stats-heading">Partners</h3>
+              <h3 className="stats-heading">PARTNERS</h3>
               <div className="stats-number">{stats.partners}</div>
             </div>
             <div className="app__stats-item">
-              <h3 className="stats-heading">Projects</h3>
+              <h3 className="stats-heading">PROJECTS</h3>
               <div className="stats-number">{stats.projects}</div>
             </div>
           </div>

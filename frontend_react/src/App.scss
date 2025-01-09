@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --font-base: "Poppins", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-base);  /* Use Montserrat for everything */
   transition: all 0.3s ease-in-out;
 }
 
@@ -23,7 +30,7 @@ body, html {
   position: relative;
   font-family: var(--font-base);  /* Ensure Montserrat is applied */
   font-weight: 400; /* Normal weight for body text */
-  text-transform: uppercase; /* Ensure text is capitalized */
+  //text-transform: uppercase; /* Ensure text is capitalized */
 }
 
 /* App Layout */
@@ -124,7 +131,7 @@ body, html {
 .body-text {
   text-align: center;
   color: var(--white-color);
-  text-transform: capitalize;
+  //text-transform: capitalize;
 
   span {
     color: var(--secondary-color);
