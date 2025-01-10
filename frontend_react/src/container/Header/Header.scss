@@ -58,6 +58,7 @@
       height: 100%;
       background: url('../../assets/bgIMG.png') no-repeat center center / cover;
       z-index: -1; // Ensures it stays behind all other elements
+      
     }
 
     
@@ -73,6 +74,21 @@
       bottom: -65%;
       left: -32.5%;
       transform: translate(-30%, 30%); /* Center it on the page */
+
+      @media screen and (max-width: 1200px) {
+
+      }
+
+      @media screen and (max-width: 1200px) {
+        position: absolute;
+        right: -30%;
+        left: auto;
+        top: 100%;
+        transform: translateY(0px) scale(0.8); // Changed from negative to positive value
+        bottom: auto;
+        margin: 0;
+      }
+    
     
       div {
         position: absolute;
@@ -90,7 +106,9 @@
         width: 60%; /* Size of the image inside the circle */
         height: 60%;
       }
+    
   }
+  
 
   .app__header-info {
       flex: 0.65;
@@ -124,8 +142,9 @@
           border-radius: 15px;
           flex-direction: row;
           width: auto;
+          background: #c9d0dcc0;
 
-          box-shadow: 0 0 20px rgba(83, 80, 80, 0.363);
+          box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
       }
 
       .tag-cmp {
@@ -136,7 +155,7 @@
               width: 100%;
               text-transform: uppercase;
               text-align: right;
-              color: rgb(102, 121, 206);
+              color: rgb(255, 255, 255);
           }
       }
 
@@ -162,8 +181,6 @@
       justify-content: flex-end;
       align-items: flex-end;
       position: relative;
-      padding-bottom: 15%;
-
 
       img {
           width: 80%;
@@ -172,6 +189,11 @@
           left: 20%;
           object-fit: contain;
           z-index: 8;
+
+          @media screen and (max-width: 1200px) {
+            position: relative;
+            top: 390px;
+          }
 
       }
 
@@ -184,12 +206,19 @@
           height: 500px;
           transform: translate(-50%, 50%);
           z-index: 7;
+
+          
+      }
+      @media screen and (min-width: 1200px) {
+        position: relative;
+        bottom: 110px;
       }
 
+
       @media screen and (max-width: 1200px) {
-          margin: 5rem 0;
+          margin: -10rem 0;
           position: relative;
-          bottom: 320px;
+          bottom: -35px;
       }
   }
 
@@ -240,6 +269,11 @@
                   }
               }
           }
+      }
+      @media screen and (max-width: 1200px) {
+        position: relative;
+        width: 250%;
+        top: 425px;
       }
     
     

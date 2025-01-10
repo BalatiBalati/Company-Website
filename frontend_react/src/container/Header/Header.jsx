@@ -60,7 +60,7 @@ const Header = () => {
             <span>😉</span>
             <div style={{ marginLeft: 20 }}>
               <p className="body-text">Hi there! My name is</p>
-              <h1 className="head-text"><span>Balati</span></h1>
+              <h1 className="head-text"><span>BALATI BALATI</span></h1>
             </div>
           </div>
 
@@ -91,9 +91,9 @@ const Header = () => {
         className="app__header-circles"
         style={{
           transform: `rotate(${rotateAngle}deg)`, // Apply rotation to the entire container
-          transition: 'transform 1s linear', // Smooth animation transition
+          transition: 'transform 15s linear', // Smooth animation transition
           position: 'relative',  // Keep the circles positioned relative to the container
-          top: '-70px',
+          top: '-140px',
         
         }}
       >
