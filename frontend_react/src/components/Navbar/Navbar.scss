@@ -2,10 +2,9 @@
     width: 100%;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
 
-    padding: 1rem 10rem;
+    padding-block: 1rem;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);

@@ -1,37 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { images } from '../../constants'; // Ensure these images are imported
+import { images } from '../../constants';
 import './Header.scss';
 
 const Header = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [rotateAngle, setRotateAngle] = useState(0);
+  const [stats, setStats] = useState({ partners: 0, projects: 0 });
+
   const circles = [
     { image: images.flutter, angleOffset: 0 },
     { image: images.redux, angleOffset: 60 },
     { image: images.sass, angleOffset: 120 },
-    { image: images.flutter, angleOffset:240 },
+    { image: images.flutter, angleOffset: 240 },
     { image: images.redux, angleOffset: 300 },
     { image: images.sass, angleOffset: 240 },
     { image: images.sass, angleOffset: -60 },
   ];
 
-  const [rotateAngle, setRotateAngle] = useState(0);
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRotateAngle((prevAngle) => prevAngle + 1); // Increase the rotation angle over time
-    }, 16); // ~60fps (16ms per frame)
+      setRotateAngle((prevAngle) => prevAngle + 1);
+    }, 16);
 
-    return () => clearInterval(interval); // Clean up interval on component unmount
+    return () => clearInterval(interval);
   }, []);
-
-  // State for animating stats numbers
-  const [stats, setStats] = useState({ partners: 0, projects: 0 });
 
   useEffect(() => {
     const animateStats = (target, duration, key) => {
       let start = 0;
-      const increment = target / (duration / 16); // Increment per frame at ~60fps
+      const increment = target / (duration / 16);
 
       const timer = setInterval(() => {
         start += increment;
@@ -40,15 +46,24 @@ const Header = () => {
       }, 16);
     };
 
-    animateStats(5, 1000, 'partners'); // Animate 'partners' to 5 in 1 second
-    animateStats(80, 1000, 'projects'); // Animate 'projects' to 80 in 1 second
+    animateStats(5, 1000, 'partners');
+    animateStats(80, 1000, 'projects');
   }, []);
+
+  const getTranslateX = (index, circle) => 
+    windowWidth <= 375 ? 150 : 240;
+
+  const circleStyles = {
+    transform: `rotate(${rotateAngle}deg)`,
+    transition: 'transform 15s linear',
+    position: 'relative',
+    top: windowWidth <= 768 ? '150px' : windowWidth <= 1200 ? '140px' : '-140px',
+  };
 
   return (
     <div className="app__header app__flex"> 
-
       <div className="app__header-bg">
-        <img src={images.bgIMG} className="app__header-bg-img" />
+        <img src={images.bgIMG} className="app__header-bg-img" alt="background" />
       </div>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -67,7 +82,7 @@ const Header = () => {
           <div className="tag-cmp app__flex">
             <p className="p-text">Software Developer</p>
             <p className="p-text">Graphics Designer</p>
-            <p className="p-text">Web Developer</p>
+            <p className="p-text">Website Developer</p>
           </div>
         </div>
       </motion.div>
@@ -89,13 +104,7 @@ const Header = () => {
 
       <motion.div
         className="app__header-circles"
-        style={{
-          transform: `rotate(${rotateAngle}deg)`, // Apply rotation to the entire container
-          transition: 'transform 15s linear', // Smooth animation transition
-          position: 'relative',  // Keep the circles positioned relative to the container
-          top: '-140px',
-        
-        }}
+        style={circleStyles}
       >
         {circles.map((circle, index) => (
           <div
@@ -105,7 +114,7 @@ const Header = () => {
               position: 'absolute',
               top: '50%',
               left: '50%',
-              transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(240px)`,
+              transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(${getTranslateX(index, circle)}px)`,
             }}
           >
             <motion.img
@@ -132,11 +141,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-
     </div>
-
-    
-    
   );
 };
 
