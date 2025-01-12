@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 
-import { Header, About, Footer, Work, Skills} from "./container";
+import { Home, About, Footer, Work, Skills} from "./container";
 import { Navbar } from "./components";
 import AnimatedBlob from "./components/AnimatedBlob/AnimatedBlob";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
@@ -24,7 +24,7 @@ const App = () => {
 
       {/* Navbar and page sections */}
       <Navbar />
-      <Header />
+      <Home />
       <About />
       <Work />
       <Skills />

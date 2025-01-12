@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { images } from '../../constants';
-import './Header.scss';
+import './Home.scss';
 
-const Header = () => {
+const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [rotateAngle, setRotateAngle] = useState(0);
   const [stats, setStats] = useState({ partners: 0, projects: 0 });
@@ -150,4 +150,4 @@ const Header = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Header, 'app__header app__flex'), 'header', 'app__primary');
+  MotionWrap(Home, 'app__header app__flex'), 'home', 'app__primary');

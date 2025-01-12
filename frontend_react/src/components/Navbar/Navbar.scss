@@ -20,17 +20,17 @@
     z-index: 10000;
 
     img {
-        width: 150px;
-        height: 20px;
+        width: 35px;
+        height: 35px;
 
         @media screen and (min-width: 2000px){
-            width: 180px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
         }
     }
 }
-
 .app__navbar-links{
+
     display: -1;
     display: flex;
     justify-content: center;

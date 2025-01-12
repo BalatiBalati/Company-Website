@@ -1,12 +1,12 @@
-#home {
-  position: relative;
-  //background: url('../../assets/bgIMG.png') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  z-index: 10000;
-}
+// #home {
+//   position: relative;
+//   //background: url('../../assets/bgIMG.png') center/cover no-repeat;
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   overflow: hidden;
+//   z-index: 10000;
+// }
 
 .app__wrapper {
   padding: 0;
@@ -67,13 +67,15 @@
     height: 100%;
     background: url('../../assets/bgIMG.png') no-repeat center center / cover;
     z-index: -1; // Ensures it stays behind all other elements
+    // display: none;
 
-    @media screen and (max-width: 375px) {
+
+    @media screen and (max-width: 450px) {
       position: absolute;
-      top: -30px;
+      top: 0px;
       // left: 0;
       width: 100%;
-      height: 90%;
+      height: 100%;
       background: url('../../assets/bgIMG.png') no-repeat center center / cover;
       // z-index: -1; // Ensures it stays behind all other elements
     }
@@ -209,6 +211,7 @@
       box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
 
       @media screen and (max-width: 450px) {
+        margin-top: 10%;
         padding: -2.0rem -1.0rem;
         border: var(--white-color);
         border-radius: 15px;
@@ -413,10 +416,11 @@
     text-align: center; // Center align text and content
 
     @media screen and (max-width: 450px) {
-      // //width: 100%;
-      position: absolute;
+      //width: 100%;
+      position: relative;
       // left: 0%;
-      bottom: 80px; //TO BE CHANGED
+      top: 100px; //TO BE CHANGED
+      bottom: auto;
       padding: 1.9rem 2rem;
       // //z-index: 10;
       // background: linear-gradient(to right, rgba(200, 200, 200) 40%, rgb(200, 200, 200) 40%); /* Gradient goes from transparent to solid horizontally */
@@ -433,6 +437,7 @@
         font-size: 2.5rem;
         font-weight: bold;
         color: #ffffff; // Darker text
+        font-size: 1.5rem; // Smaller font size for smaller screens
       }
     }
 
