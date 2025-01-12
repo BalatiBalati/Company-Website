@@ -50,8 +50,8 @@ const Header = () => {
     animateStats(80, 1000, 'projects');
   }, []);
 
-  const getTranslateX = (index, circle) => 
-    windowWidth <= 375 ? 150 : 240;
+  const getTranslateX = (index, circle) =>
+    windowWidth <= 450 ? 150 : 240;
 
   const circleStyles = {
     transform: `rotate(${rotateAngle}deg)`,
@@ -61,9 +61,9 @@ const Header = () => {
   };
 
   return (
-    <div className="app__header app__flex"> 
+    <div className="app__header app__flex">
       <div className="app__header-bg">
-        <img src={images.bgIMG} className="app__header-bg-img" alt="background" />
+        <img src={images.bgIMG} className="app__header-bg-img" />
       </div>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -72,17 +72,21 @@ const Header = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>😉</span>
-            <div style={{ marginLeft: 20 }}>
-              <p className="body-text">Hi there! My name is</p>
-              <h1 className="head-text"><span>BALATI BALATI</span></h1>
+            {windowWidth > 450 && <span>😉</span>}
+            <div 
+              style={{
+                marginLeft: windowWidth < 450 ? -170 : 20, // Conditional margin
+              }}
+            >
+              <p className="p-text">Hi there! My name is</p>
+              <h1 className="head-text"><span>BALATI<br />BALATI</span></h1>
             </div>
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">Software Developer</p>
-            <p className="p-text">Graphics Designer</p>
-            <p className="p-text">Website Developer</p>
+            <p className="p-text">Software Developer <br /></p>
+            <p className="p-text">Graphics Designer <br /></p>
+            <p className="p-text">Website Developer <br /></p>
           </div>
         </div>
       </motion.div>

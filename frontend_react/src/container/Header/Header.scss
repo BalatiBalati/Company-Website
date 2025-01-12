@@ -1,392 +1,522 @@
 #home {
-    position: relative;
-    //background: url('../../assets/bgIMG.png') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    z-index: 10000;
+  position: relative;
+  //background: url('../../assets/bgIMG.png') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000;
 }
 
 .app__wrapper {
-    padding: 0;
+  padding: 0;
 }
 
 .body-text {
-    text-align: center;
-    color: var(--white-color);
-    //text-transform: capitalize;
-  
-    span {
-      color: var(--secondary-color);
-    }
-  
-    @media screen and (min-width: 2000px) {
-      font-size: 4rem;
-    }
-  
-    @media screen and (max-width: 450px) {
-      font-size: 2rem;
-    }
+  text-align: center;
+  color: var(--white-color);
+  //text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
 }
 
 .app__header {
-    flex: 1;
-    width: 100%;
-    height: 0%;
-    flex-direction: row;
+  flex: 1;
+  width: 100%;
+  height: 0%;
+  flex-direction: row;
+  padding: 6rem 2rem 0;
+  z-index: 11000;
+
+  @media screen and (min-width: 2000px) {
+    padding-top: 8rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  // @media screen and (max-width: 450px) {
+  //   padding: 6rem 1rem 2rem;
+  // }
+
+  @media screen and (max-width: 450px) {
+    //flex: 1;
+    //width: 100%;
+    //height: 100%;
+    //flex-direction: row;
     padding: 6rem 2rem 0;
-    z-index: 11000;
-  
-    @media screen and (min-width: 2000px) {
-      padding-top: 8rem;
-    }
-  
-    @media screen and (max-width: 1200px) {
-      flex-direction: column;
-    }
-  
-    @media screen and (max-width: 450px) {
-      padding: 6rem 1rem 2rem;
-    }
 
-    &-bg {
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/bgIMG.png') no-repeat center center / cover;
+    z-index: -1; // Ensures it stays behind all other elements
+
+    @media screen and (max-width: 375px) {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -30px;
+      // left: 0;
       width: 100%;
-      height: 100%;
+      height: 90%;
       background: url('../../assets/bgIMG.png') no-repeat center center / cover;
-      z-index: -1; // Ensures it stays behind all other elements
-      
+      // z-index: -1; // Ensures it stays behind all other elements
+    }
+    
+  }
+
+  
+.app__header-circles {
+    position: relative; /* Ensure circles are positioned relative to this container */
+    width: 300px; /* Width of the orbit */
+    height: 300px; /* Height of the orbit */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    z-index: 7;
+    bottom: -65%;
+    left: -32.5%;
+    transform: translate(-30%, 30%); /* Center it on the page */
+
+    @media screen and (max-width: 1200px) {
+      position: relative; // Changed back to relative
+      right: -30%;
+      left: auto;
+      top: 800px; // Move it way down below other content
+      transform: scale(0.8); // Remove translateY, keep scale
+      bottom: auto;
+      margin: 0;
     }
 
-    
-  .app__header-circles {
-      position: relative; /* Ensure circles are positioned relative to this container */
-      width: 300px; /* Width of the orbit */
-      height: 300px; /* Height of the orbit */
+    @media screen and (max-width: 768px) {
+      position: relative;
+      left: 0px;
+    }
+
+    @media screen and (max-width: 450px) {
+      position: relative;
+      left: -185px;
+      z-index: 10;
+    }
+
+
+    div {
+      position: absolute;
+      width: 100px; /* Size of each circle */
+      height: 100px;
+      border-radius: 50%;
+      background: var(--white-color);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 1rem;
-      z-index: 7;
-      bottom: -65%;
-      left: -32.5%;
-      transform: translate(-30%, 30%); /* Center it on the page */
 
-      @media screen and (max-width: 1200px) {
-        position: relative; // Changed back to relative
-        right: -30%;
-        left: auto;
-        top: 800px; // Move it way down below other content
-        transform: scale(0.8); // Remove translateY, keep scale
-        bottom: auto;
-        margin: 0;
-      }
-
-      @media screen and (max-width: 768px) {
-        position: relative;
-        left: 0px;
-      }
-
-      @media screen and (max-width: 375px) {
-        position: relative;
-        left: -185px;
-      }
-
-  
-      div {
-        position: absolute;
-        width: 100px; /* Size of each circle */
-        height: 100px;
-        border-radius: 50%;
-        background: var(--white-color);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @media screen and (max-width: 375px) {
-          //position: relative;
-          //right: 190px;
-          width: 80px; /* Width of the orbit */
-          height: 80px; /* Height of the orbit */
-          
-        }
-
+      @media screen and (max-width: 450px) {
+        //position: relative;
+        //right: 190px;
+        width: 80px; /* Width of the orbit */
+        height: 80px; /* Height of the orbit */
         
-      }
-    
-      img {
-        width: 60%; /* Size of the image inside the circle */
-        height: 60%;
-
-        @media screen and (max-width: 375px) {
-          //position: relative;
-          //right: 190px;
-          width: 10px; /* Width of the orbit */
-          height: 10px; /* Height of the orbit */
-          
-        }
       }
 
       
-    
-  }
+    }
   
+    img {
+      width: 60%; /* Size of the image inside the circle */
+      height: 60%;
 
-  .app__header-info {
+      @media screen and (max-width: 450px) {
+        //position: relative;
+        //right: 190px;
+        width: 10px; /* Width of the orbit */
+        height: 10px; /* Height of the orbit */
+        
+      }
+    }
+
+    
+  
+}
+
+
+.app__header-info {
+    flex: 0.65;
+    top: 60%;
+    right: 80%;
+    display: flex;
+    position: absolute; /* Ensure circles are positioned relative to this container */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    padding: 1rem;
+    z-index: 8;
+
+    @media screen and (max-width: 450px) {
       flex: 0.65;
-      top: 60%;
-      right: 80%;
+      top: 40%;
+      right: 50%;
       display: flex;
       position: absolute; /* Ensure circles are positioned relative to this container */
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
       height: 100%;
-      padding: 1rem;
-      z-index: 8;
-  }
+      
+      //padding: 1rem;
+      //z-index: 8;
+    }
+}
 
-  .app__header-badge {
+.app__header-badge {
+    width: auto;
+    top: -50%;
+    right: -70%;
+    position: relative; /* Ensure circles are positioned relative to this container */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 8;
+
+
+    .badge-cmp {
+      padding: 1rem 2rem;
+      border: var(--white-color);
+      border-radius: 15px;
+      flex-direction: row;
+      text-transform: uppercase;
       width: auto;
-      top: -50%;
-      right: -70%;
-      position: relative; /* Ensure circles are positioned relative to this container */
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: column;
-      z-index: 8;
+      background: #c9d0dcc0;
 
-      .badge-cmp,
-      .tag-cmp {
-          padding: 1rem 2rem;
+      box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
+
+      @media screen and (max-width: 450px) {
+        padding: -2.0rem -1.0rem;
+        border: var(--white-color);
+        border-radius: 15px;
+        flex-direction: row;
+        text-transform: uppercase;
+        width: 80%;
+        height: 60%;
+        background: #c9d0dcc0;
+        position: relative;
+        top: 115px;
+        right: -150px;
+  
+        box-shadow: 0 0 20px rgba(53, 50, 50, 0);
+      }
+
+    }
+    .tag-cmp {
+        padding: 1rem 2rem;
+        border: var(--white-color);
+        border-radius: 15px;
+        flex-direction: row;
+        text-transform: uppercase;
+        width: auto;
+        background: #c9d0dcc0;
+
+        box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
+
+
+
+        @media screen and (max-width: 768px) {
+          padding: 0rem 2rem;
           border: var(--white-color);
           border-radius: 15px;
           flex-direction: row;
-          width: auto;
+          width: 500px;
+          background: #0b295c00;
+          position: relative;
+          left: 30px;
+          top: 90px;
+  
+          box-shadow: 0 0 20px rgba(53, 50, 50, 0);
+        }
+
+        @media screen and (max-width: 450px) {
+          padding: 0.5rem -25rem;
+          //border: var(--white-color);
+          //border-radius: 15px;
+          //flex-direction: row;
+          width: 500px;
           background: #c9d0dcc0;
+          z-index: 10000;
+          position: relative;
+          top: 25%;
+  
+          //box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
+        }
+    }
 
-          box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
+    .tag-cmp {
+        flex-direction: column;
+        margin-top: 3rem;
 
-          @media screen and (max-width: 768px) {
-            padding: 0rem 2rem;
-            border: var(--white-color);
-            border-radius: 15px;
-            flex-direction: row;
-            width: 500px;
-            background: #0b295c00;
-            position: relative;
-            left: 30px;
-            top: 90px;
-    
-            box-shadow: 0 0 20px rgba(53, 50, 50, 0);
-          }
-      }
+        p {
+            width: 100%;
+            text-transform: uppercase;
+            text-align: right;
+            color: rgb(255, 255, 255);
 
-      .tag-cmp {
-          flex-direction: column;
-          margin-top: 3rem;
-
-          p {
-              width: 100%;
+            @media screen and (max-width: 450px) {
+              width: 36%;
               text-transform: uppercase;
               text-align: right;
               color: rgb(255, 255, 255);
-          }
-      }
+              position: relative;
+              left: -15px;
+            }
+        }
 
-      //https://qvfdxlwx-5500.asse.devtunnels.ms/
-
-      span {
-          font-size: 2.5rem;
-
-          @media screen and (min-width: 2000px) {
-              font-size: 5rem;
-          }
-      }
-
-      @media screen and (max-width: 1200px) {
-          justify-content: flex-start;
-          align-items: flex-start;
-      }
+        
 
 
-  }
-
-  .app__header-img {
-      flex: 1;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      position: relative;
-
-      img {
-          width: 80%;
-          position: relative;
-          top: 380px;
-          left: 20%;
-          object-fit: contain;
-          z-index: 8;
-
-          @media screen and (max-width: 1200px) {
-            position: relative;
-            top: 390px;
-          }
-
-          @media screen and (max-width: 768px) {
-            position: relative;
-            left: 150px;
-            top: 345px;
-          }
-
-          @media screen and (max-width: 375px) {
-            position: relative;
-            top: 200px;
-            //right: 190px;
-            //width: 30px; /* Width of the orbit */
-            //height: 30px; /* Height of the orbit */
-            
-          }
-
-      }
-
-      .overlay_circle{
-          position: absolute;
-          left: 35%;
-          top: -280px;
-          z-index: -1;
-          width: 500px;
-          height: 500px;
-          transform: translate(-50%, 50%);
-          z-index: 7;
-
-          @media screen and (max-width: 375px) {
-            position: absolute;
-            left: 5%;
-            top: -165px;
-            z-index: -1;
-            width: 300px;
-            height: 300px;
-            transform: translate(-50%, 50%);
-            z-index: 7;
-            
-          }
-
-          
-      }
-      @media screen and (min-width: 1200px) {
-        position: relative;
-        bottom: 110px;
-      }
-      
-      @media screen and (max-width: 1200px) {
-        margin: -10rem 0;
-        position: relative;
-        bottom: -35px;
     }
 
-      @media screen and (max-width: 768px) {
-        position: relative;
-        right: 190px;
-      }
+    span {
+        font-size: 2.5rem;
 
-      // @media screen and (max-width: 375px) {
-      //   position: relative;
-      //   right: 190px;
+        @media screen and (min-width: 2000px) {
+            font-size: 5rem;
+        }
+
+        @media screen and (max-width: 450px) {
+          font-size: 2.5rem;
+        }
+
         
-      // }
+    }
+
+    @media screen and (max-width: 1200px) {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+
+}
+
+.app__header-img {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+
+    img {
+        width: 80%;
+        position: relative;
+        top: 380px;
+        left: 20%;
+        object-fit: contain;
+        z-index: 8;
+
+        @media screen and (max-width: 1200px) {
+          position: relative;
+          top: 390px;
+        }
+
+        @media screen and (max-width: 768px) {
+          position: relative;
+          left: 150px;
+          top: 345px;
+        }
+
+        @media screen and (max-width: 450px) {
+          position: relative;
+          top: 300px;
+          //right: 190px;
+          //width: 30px; /* Width of the orbit */
+          //height: 30px; /* Height of the orbit */
+          z-index: 11;
+          
+        }
+
+    }
+
+    .overlay_circle{
+        position: absolute;
+        left: 35%;
+        top: -280px;
+        z-index: -1;
+        width: 500px;
+        height: 500px;
+        transform: translate(-50%, 50%);
+        z-index: 7;
+
+
+        @media screen and (max-width: 450px) {
+          position: absolute;
+          left: 5%;
+          top: -130px;
+          z-index: 100001;
+          width: 300px;
+          height: 300px;
+          transform: translate(-50%, 50%);
+          z-index: 10;
+          
+        }
+
+        
+    }
+    @media screen and (min-width: 1200px) {
+      position: relative;
+      bottom: 110px;
+    }
+    
+    @media screen and (max-width: 1200px) {
+      margin: -10rem 0;
+      position: relative;
+      bottom: -35px;
   }
 
-  .app__new-section {
-      width: 100%;
+    @media screen and (max-width: 768px) {
+      position: relative;
+      right: 190px;
+    }
+
+    // @media screen and (max-width: 375px) {
+    //   position: relative;
+    //   right: 190px;
+      
+    // }
+}
+
+.app__new-section {
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0px; //TO BE CHANGED
+    padding: 1.9rem 2rem;
+    z-index: 15;
+    background: linear-gradient(to right, rgba(200, 200, 200) 40%, rgb(200, 200, 200) 40%); /* Gradient goes from transparent to solid horizontally */
+    text-align: center; // Center align text and content
+
+    @media screen and (max-width: 450px) {
+      // //width: 100%;
       position: absolute;
-      left: 0%;
-      bottom: -1.0px;
+      // left: 0%;
+      bottom: 80px; //TO BE CHANGED
       padding: 1.9rem 2rem;
-      z-index: 10;
-      background: linear-gradient(to right, rgba(200, 200, 200) 40%, rgb(200, 200, 200) 40%); /* Gradient goes from transparent to solid horizontally */
+      // //z-index: 10;
+      // background: linear-gradient(to right, rgba(200, 200, 200) 40%, rgb(200, 200, 200) 40%); /* Gradient goes from transparent to solid horizontally */
       text-align: center; // Center align text and content
-    
-      .new-section-heading {
+    }
+  
+    .new-section-heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffffff; // Darker text
+      //margin-bottom: 1rem;
+
+      @media screen and (max-width: 450px) {
         font-size: 2.5rem;
         font-weight: bold;
         color: #ffffff; // Darker text
-        //margin-bottom: 1rem;
       }
+    }
 
-      
+    
 
-      .app__stats {
+    .app__stats {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        @media screen and (max-width: 450px) {
           display: flex;
           justify-content: center;
-          margin-top: 2rem;
+          margin-top: 0.75rem;
+          margin-bottom: -2.5rem;
+        }
 
-          .app__stats-row {
+        .app__stats-row {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 600px;
+
+            @media screen and (max-width: 450px) {
               display: flex;
               justify-content: space-around;
               width: 100%;
-              max-width: 600px;
+              max-width: 300px;
+            }
 
-              .app__stats-item {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
 
-                  .stats-heading {
-                      font-size: 1.2rem;
-                      font-weight: bold;
-                      color: #444;
-                      margin-bottom: 0.5rem;
-                  }
 
-                  .stats-number {
-                      font-size: 2.5rem;
-                      font-weight: bold;
-                      color: #007BFF;
-                  }
-              }
-          }
+            .app__stats-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .stats-heading {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: #444;
+                    margin-bottom: 0.5rem;
+                }
+
+                .stats-number {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    color: #007BFF;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+      position: relative;
+      width: 250%; //MIGHT CHANGE LATER
+      top: 425px;
+    }
+  
+  
+    @media screen and (max-width: 768px) {
+      padding: 3rem 1rem;
+  
+      .new-section-heading {
+        font-size: 2rem;
       }
-      @media screen and (max-width: 1200px) {
-        position: relative;
-        width: 250%; //MIGHT CHANGE LATER
-        top: 425px;
-      }
-    
-    
-      @media screen and (max-width: 768px) {
-        padding: 3rem 1rem;
-    
-        .new-section-heading {
-          font-size: 2rem;
-        }
-    
-        .new-section-description {
-          font-size: 0.9rem;
-        }
-      }
-
-      @media screen and (max-width: 375px) {
-        .new-section-heading {
-          font-size: 1.5rem;
-        }
-    
-        .new-section-description {
-          font-size: 0.05rem;
-        }
-
-        position: relative;
-        top: 300px;
-        //right: 190px;
-        //width: 30px; /* Width of the orbit */
-        //height: 30px; /* Height of the orbit */
-        
+  
+      .new-section-description {
+        font-size: 0.9rem;
       }
     }
+
+    @media screen and (max-width: 450px) {
+      .new-section-heading {
+        font-size: 1.5rem;
+      }
+  
+      .new-section-description {
+        font-size: 0.05rem;
+      }
+
+      position: relative;
+      top: 285px;
+
+      
+    }
+  }
 }
