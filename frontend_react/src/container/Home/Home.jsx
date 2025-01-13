@@ -63,7 +63,7 @@ const Home = () => {
   return (
     <div className="app__header app__flex">
       <div className="app__header-bg">
-        <img src={images.bgIMG} className="app__header-bg-img" />
+        <img className="app__header-bg-img" />
       </div>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
