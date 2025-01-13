@@ -57,7 +57,8 @@ const Home = () => {
     transform: `rotate(${rotateAngle}deg)`,
     transition: 'transform 15s linear',
     position: 'relative',
-    top: windowWidth <= 768 ? '150px' : windowWidth <= 1200 ? '140px' : '-140px',
+    top: windowWidth <= 450 ? '40px' : windowWidth <= 1199 ? '0px' : windowWidth <= 1200 ? '140px' : '-140px',
+
   };
 
   return (

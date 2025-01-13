@@ -76,7 +76,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 450px) {
     .app__rows {
         grid-template-columns: 1fr; /* Stack rows on smaller screens */
     }
