@@ -14,7 +14,7 @@
     font-size: 4rem;
   }
 
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 450px) {
     font-size: 2rem;
   }
 }
@@ -35,7 +35,7 @@
     flex-direction: column;
   }
 
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 450px) {
     width: 100%;
     padding: 6rem 2rem 0;
   }
@@ -49,7 +49,7 @@
     background: url('../../assets/bgIMG.png') no-repeat center center / cover;
     z-index: -1; // Ensures it stays behind all other elements
 
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 450px) {
       position: absolute;
       top: 0px;
       width: 100%;
@@ -81,7 +81,7 @@
       margin: 0;
     }
 
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 450px) {
       position: relative;
       left: -185px;
       z-index: 10;
@@ -98,7 +98,7 @@
       justify-content: center;
       align-items: center;
 
-      @media screen and (max-width: 769px) {
+      @media screen and (max-width: 450px) {
         width: 80px; /* Width of the orbit */
         height: 80px; /* Height of the orbit */
         
@@ -109,7 +109,7 @@
       width: 60%; /* Size of the image inside the circle */
       height: 60%;
 
-      @media screen and (max-width: 769px) {
+      @media screen and (max-width: 450px) {
         //position: relative;
         //right: 190px;
         width: 10px; /* Width of the orbit */
@@ -132,9 +132,9 @@
     padding: 1rem;
     z-index: 8;
 
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 450px) {
       flex: 0.65;
-      top: 40%;
+      top: 35%;
       right: 50%;
       display: flex;
       position: absolute; /* Ensure circles are positioned relative to this container */
@@ -167,7 +167,7 @@
 
       box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
 
-      @media screen and (max-width: 769px) {
+      @media screen and (max-width: 450px) {
         margin-top: 10%;
         padding: -2.0rem -1.0rem;
         border: var(--white-color);
@@ -175,10 +175,10 @@
         flex-direction: row;
         text-transform: uppercase;
         width: 80%;
-        height: 60%;
+        height: 50%;
         background: #c9d0dcc0;
         position: relative;
-        top: 115px;
+        top: 135px;
         right: -150px;
   
         box-shadow: 0 0 20px rgba(53, 50, 50, 0);
@@ -199,30 +199,30 @@
         @media screen and (max-width: 450px) {
           padding: 0rem 2rem;
           border: var(--white-color);
-          border-radius: 15px;
+          //border-radius: 15px;
           flex-direction: row;
-          width: 500px;
+          width: 700px;
           background: #0b295c00;
           position: relative;
-          left: 30px;
+          left: -30px;
           top: 90px;
   
           box-shadow: 0 0 20px rgba(53, 50, 50, 0);
         }
 
-        @media screen and (max-width: 769px) {
+        @media screen and (max-width: 450px) {
           padding: 0.5rem -25rem;
           width: 500px;
           background: #c9d0dcc0;
           z-index: 10000;
           position: relative;
-          top: 25%;
+          top: 32.5%;
         }
     }
 
     .tag-cmp {
         flex-direction: column;
-        margin-top: 3rem;
+        margin-top: 2rem;
 
         p {
             width: 100%;
@@ -230,13 +230,13 @@
             text-align: right;
             color: rgb(255, 255, 255);
 
-            @media screen and (max-width: 769px) {
+            @media screen and (max-width: 450px) {
               width: 36%;
               text-transform: uppercase;
               text-align: right;
               color: rgb(255, 255, 255);
               position: relative;
-              left: -15px;
+              left: 45px;
             }
         }
     }
@@ -248,7 +248,7 @@
             font-size: 5rem;
         }
 
-        @media screen and (max-width: 769px) {
+        @media screen and (max-width: 450px) {
           font-size: 2.5rem;
         }
     }
@@ -287,7 +287,7 @@
           top: 345px;
         }
 
-        @media screen and (max-width: 769px) {
+        @media screen and (max-width: 450px) {
           position: relative;
           top: 300px;
           z-index: 11;
@@ -304,7 +304,7 @@
         transform: translate(-50%, 50%);
         z-index: 7;
 
-        @media screen and (max-width: 769px) {
+        @media screen and (max-width: 450px) {
           position: absolute;
           left: 5%;
           top: -130px;
@@ -347,7 +347,7 @@
       font-weight: bold;
       color: #ffffff; // Darker text
 
-      @media screen and (max-width: 769px) {
+      @media screen and (max-width: 450px) {
         font-size: 2.5rem;
         font-weight: bold;
         color: #ffffff; // Darker text
@@ -360,7 +360,7 @@
         justify-content: center;
         margin-top: 2rem;
 
-        @media screen and (max-width: 769px) {
+        @media screen and (max-width: 450px) {
           display: flex;
           justify-content: center;
           margin-top: 0.75rem;
@@ -373,7 +373,7 @@
             width: 100%;
             max-width: 600px;
 
-            @media screen and (max-width: 769px) {
+            @media screen and (max-width: 450px) {
               display: flex;
               justify-content: space-around;
               width: 100%;
@@ -413,7 +413,7 @@
       }
     }
 
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 450px) {
       .new-section-heading {
         font-size: 1.5rem;
       }
