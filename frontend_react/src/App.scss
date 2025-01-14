@@ -25,7 +25,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100svh;
   overflow-x: hidden; /* Prevent horizontal scroll */
   position: relative;
   font-family: var(--font-base);  /* Ensure Montserrat is applied */
@@ -47,18 +47,18 @@ body, html {
   background-color: var(--deep-color);
 }
 
-.app__bgImage{
-  background-image: url('../src/assets/bgIMG.png'); /* Replace with the correct image path */
-  background-size: cover; /* Ensures the image covers the entire page */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling */
-  height: 100vh; /* Ensures it fills the entire viewport height */
-  width: 100vw; /* Ensures it fills the entire viewport width */
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Prevents scrollbars if the image overflows */
-  z-index: 9999;
-}
+// .app__bgImage{
+//   background-image: url('../src/assets/bgIMG.png'); /* Replace with the correct image path */
+//   background-size: cover; /* Ensures the image covers the entire page */
+//   background-position: center; /* Centers the image */
+//   background-repeat: no-repeat; /* Prevents tiling */
+//   height: 100vh; /* Ensures it fills the entire viewport height */
+//   width: 100vw; /* Ensures it fills the entire viewport width */
+//   margin: 0;
+//   padding: 0;
+//   overflow: hidden; /* Prevents scrollbars if the image overflows */
+//   z-index: 9999;
+// }
 
 
 .app__primarybg {
@@ -70,7 +70,7 @@ body, html {
   min-height: 100vh;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .app__flex {

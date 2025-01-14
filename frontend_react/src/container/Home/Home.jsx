@@ -92,7 +92,7 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
@@ -105,7 +105,7 @@ const Home = () => {
           alt="profile_circle"
           className="overlay_circle"
         />
-      </motion.div>
+      </motion.div> */}
 
       <motion.div
         className="app__header-circles"
@@ -131,17 +131,35 @@ const Home = () => {
         ))}
       </motion.div>
 
-      <div className="app__new-section">
-        <h2 className="new-section-heading">DISCOVER MY WORK</h2>
-        <div className="app__stats">
-          <div className="app__stats-row">
-            <div className="app__stats-item">
-              <h3 className="stats-heading">PARTNERS</h3>
-              <div className="stats-number">{stats.partners}</div>
-            </div>
-            <div className="app__stats-item">
-              <h3 className="stats-heading">PROJECTS</h3>
-              <div className="stats-number">{stats.projects}</div>
+      <div className="bottom-holder">
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          className="app__header-img"
+        >
+          <img src={images.profile} alt="profile_bg" />
+          <motion.img
+            whileInView={{ scale: [0, 1] }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
+            src={images.circle}
+            alt="profile_circle"
+            className="overlay_circle"
+          />
+        </motion.div>
+
+
+        <div className="app__new-section">
+          <h2 className="new-section-heading">DISCOVER MY WORK</h2>
+          <div className="app__stats">
+            <div className="app__stats-row">
+              <div className="app__stats-item">
+                <h3 className="stats-heading">PARTNERS</h3>
+                <div className="stats-number">{stats.partners}</div>
+              </div>
+              <div className="app__stats-item">
+                <h3 className="stats-heading">PROJECTS</h3>
+                <div className="stats-number">{stats.projects}</div>
+              </div>
             </div>
           </div>
         </div>
