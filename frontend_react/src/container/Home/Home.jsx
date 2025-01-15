@@ -56,9 +56,9 @@ const Home = () => {
   const circleStyles = {
     transform: `rotate(${rotateAngle}deg)`,
     transition: 'transform 15s linear',
-    position: 'relative',
-    top: windowWidth <= 450 ? '40px' : windowWidth <= 1199 ? '0px' : windowWidth <= 1200 ? '140px' : '-140px',
-
+    // position: 'relative',
+    // top: windowWidth <= 450 ? '40px' : windowWidth <= 1199 ? '0px' : windowWidth <= 1200 ? '140px' : '-140px',
+    //top: windowWidth <= 768 ? '150px' : windowWidth <= 1500 ? '140px' : '-45px',
   };
 
   return (
@@ -92,60 +92,49 @@ const Home = () => {
         </div>
       </motion.div>
 
-      {/* <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img"
-      >
-        <img src={images.profile} alt="profile_bg" />
-        <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: 'easeInOut' }}
-          src={images.circle}
-          alt="profile_circle"
-          className="overlay_circle"
-        />
-      </motion.div> */}
-
-      <motion.div
-        className="app__header-circles"
-        style={circleStyles}
-      >
-        {circles.map((circle, index) => (
-          <div
-            className="circle-cmp app__flex"
-            key={index}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(${getTranslateX(index, circle)}px)`,
-            }}
-          >
-            <motion.img
-              src={circle.image}
-              alt="circle"
-              style={{ width: '60px', height: '60px' }}
-            />
-          </div>
-        ))}
-      </motion.div>
-
       <div className="bottom-holder">
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 0.5, delayChildren: 0.5 }}
-          className="app__header-img"
-        >
-          <img src={images.profile} alt="profile_bg" />
-          <motion.img
-            whileInView={{ scale: [0, 1] }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
-            src={images.circle}
-            alt="profile_circle"
-            className="overlay_circle"
-          />
-        </motion.div>
+        <div className="image-holder">
+            
+          <img className='hero-image' src={images.profile} alt="profile_bg" />
+          <motion.div
+            className="app__header-circles"
+            style={circleStyles}
+          >
+            {circles.map((circle, index) => (
+              <div
+                className="circle-cmp app__flex"
+                key={index}
+                style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(${getTranslateX(index, circle)}px)`,
+                }}
+              >
+                <motion.img
+                  src={circle.image}
+                  alt="circle"
+                  style={{ width: '60px', height: '60px' }}
+                />
+              </div>
+            ))}
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 0.5, delayChildren: 0.5 }}
+            className="app__header-img"
+          >
+
+            <motion.img
+              whileInView={{ scale: [0, 1] }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
+              src={images.circle}
+              alt="profile_circle"
+              className="overlay_circle"
+            />
+          </motion.div>
+        </div>
+
 
 
         <div className="app__new-section">
