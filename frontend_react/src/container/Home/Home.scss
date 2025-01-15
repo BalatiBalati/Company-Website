@@ -14,7 +14,7 @@
     font-size: 4rem;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 750px) {
     font-size: 2rem;
   }
 }
@@ -35,7 +35,7 @@
     flex-direction: column;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 750px) {
     width: 100%;
     padding: 6rem 2rem 0;
   }
@@ -51,7 +51,7 @@
     background: url('../../assets/bgIMG.png') no-repeat center center / cover;
     z-index: -1; // Ensures it stays behind all other elements
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 750px) {
       position: absolute;
       top: 0px;
       //width: 100%;
@@ -73,7 +73,7 @@
     padding: 1rem;
     z-index: 80;
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 750px) {
       flex: 0.65;
       top: 35%;
       right: 50%;
@@ -108,7 +108,7 @@
 
       box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
 
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 750px) {
         margin-top: 10%;
         padding: -2.0rem -1.0rem;
         border: var(--white-color);
@@ -137,23 +137,23 @@
 
         box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 750px) {
           padding: 0rem 2rem;
           border: var(--white-color);
           //border-radius: 15px;
           flex-direction: row;
-          width: 700px;
+          //width: 750px;
           background: #0b295c00;
           position: relative;
-          left: -30px;
+          left: -50px;
           top: 90px;
   
           box-shadow: 0 0 20px rgba(53, 50, 50, 0);
         }
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 750px) {
           padding: 0.5rem -25rem;
-          width: 500px;
+          width: 600px;
           background: #c9d0dcc0;
           z-index: 10000;
           position: relative;
@@ -171,7 +171,7 @@
             text-align: right;
             color: rgb(255, 255, 255);
 
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: 750px) {
               width: 36%;
               text-transform: uppercase;
               text-align: right;
@@ -189,7 +189,7 @@
             font-size: 5rem;
         }
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 750px) {
           font-size: 2.5rem;
         }
     }
@@ -210,7 +210,7 @@
   bottom: 0;
   z-index: 5;
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 750px){
     z-index: 500;
   }
 
@@ -242,12 +242,12 @@
         top: 0px;
       }
 
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 750px) {
         position: relative;
-        top: 50px;
-        left: 300px;
+        top: 100px;
+        left: 530px;
         z-index: 11;
-        width: 50%;
+        width: 45%;
         height: 50%;
         z-index: 100;
       }
@@ -273,9 +273,9 @@
         top: 10px;
       }
 
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 750px) {
         position: relative;
-        left: -250px;
+        left: -350px;
         top: -80px;
         z-index: 15;
       }
@@ -291,7 +291,7 @@
         justify-content: center;
         align-items: center;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 750px) {
           width: 80px; /* Width of the orbit */
           height: 80px; /* Height of the orbit */
           
@@ -302,7 +302,7 @@
         width: 60%; /* Size of the image inside the circle */
         height: 60%;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 750px) {
           //position: relative;
           //right: 190px;
           width: 10px; /* Width of the orbit */
@@ -338,7 +338,7 @@
             top: 0px;
           }
 
-          @media screen and (max-width: 450px) {
+          @media screen and (max-width: 750px) {
             position: relative;
             top: 0px;
             left: 0px;
@@ -356,13 +356,13 @@
           transform: translate(-50%, -50%);
           z-index: 7;
 
-          @media screen and (max-width: 450px) {
+          @media screen and (max-width: 750px) {
             position: relative;
-            left: -350px;
-            top: -75px;
+            left: -20px;
+            top: -35px;
             z-index: 100001;
-            width: 300px;
-            height: 300px;
+            width: 500px;
+            height: 500px;
             transform: translate(-50%, 50%);
             z-index: 10;
           }
@@ -385,7 +385,7 @@
         left: -400px;
       }
 
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 750px) {
         position: relative;
         right: 0px;
       }
@@ -415,7 +415,7 @@
         justify-content: center;
         margin-top: 2rem;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 750px) {
           margin-top: 1rem;
           margin-bottom: -0.5rem;
         }
@@ -448,7 +448,7 @@
     }
 
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 750px) {
       .new-section-heading {
         font-size: 1.5rem;
       }

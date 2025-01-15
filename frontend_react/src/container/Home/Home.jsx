@@ -10,13 +10,13 @@ const Home = () => {
   const [stats, setStats] = useState({ partners: 0, projects: 0 });
 
   const circles = [
-    { image: images.flutter, angleOffset: 0 },
-    { image: images.redux, angleOffset: 60 },
-    { image: images.sass, angleOffset: 120 },
-    { image: images.flutter, angleOffset: 240 },
-    { image: images.redux, angleOffset: 300 },
-    { image: images.sass, angleOffset: 240 },
-    { image: images.sass, angleOffset: -60 },
+    { image: images.photoshop, angleOffset: 0 },
+    { image: images.pr, angleOffset: 60 },
+    { image: images.react, angleOffset: 120 },
+    { image: images.python, angleOffset: 240 },
+    { image: images.nodejs, angleOffset: 300 },
+    { image: images.c_sharp, angleOffset: 240 },
+    { image: images.photoshop, angleOffset: -60 },
   ];
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const Home = () => {
   }, []);
 
   const getTranslateX = (index, circle) =>
-    windowWidth <= 450 ? 150 : 240;
+    windowWidth <= 750 ? 250 : 240;
 
   const circleStyles = {
     transform: `rotate(${rotateAngle}deg)`,
@@ -73,10 +73,10 @@ const Home = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            {windowWidth > 450 && <span>😉</span>}
+            {windowWidth > 750 && <span>😉</span>}
             <div 
               style={{
-                marginLeft: windowWidth < 450 ? -170 : 20, // Conditional margin
+                marginLeft: windowWidth < 750 ? -170 : 20, // Conditional margin
               }}
             >
               <p className="p-text">Hi there! My name is</p>

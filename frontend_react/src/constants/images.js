@@ -35,8 +35,18 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
+import nodejs from '../assets/nodejs.png';
+import c_sharp from '../assets/c_sharp.png';
+import photoshop from '../assets/photoshop.png';
+import pr from '../assets/pr.png';
+
+
 
 export default {
+    pr,
+    photoshop,
+    c_sharp,
+    nodejs,
     email,
     mobile,
     api,
