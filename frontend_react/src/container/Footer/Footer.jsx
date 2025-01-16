@@ -23,7 +23,7 @@ const Footer = () => {
     setError(null);
 
     const contact = {
-      _type: 'contact',
+      _type: 'contacts',
       name,
       email,
       message,
