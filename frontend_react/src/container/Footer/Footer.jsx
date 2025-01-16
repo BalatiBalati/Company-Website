@@ -107,12 +107,16 @@ const Footer = () => {
         </div>
       )}
 
-      <SocialMedia />
+      <div className="app__footer-social">
+        <SocialMedia />
 
-      <div className="copyright">
-        <p className="p-text"><span>Copyright © 2024 BALATI BALATI</span></p>
-        <p className="p-text"><span>All Rights Reserved</span></p>
+        <div className="copyright">
+          <p className="p-text"><span>Copyright © 2024 BALATI BALATI</span></p>
+          <p className="p-text"><span>All Rights Reserved</span></p>
+        </div>
+
       </div>
+
     </div>
   );
 };
