@@ -26,7 +26,7 @@
 }
 
 .app__skills-container {
-    width: 80%;
+    width: 78%;
     margin-top: 3rem;
 
     display: flex;
@@ -109,14 +109,36 @@
 .app__skills-exp {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    // justify-content: flex-start;
+    // align-items: flex-start;
     flex-direction: column;
     position: relative;
     left: 37%;
 
     @media screen and (max-width: 900px) {
         margin-top: 2rem;
+        position: relative;
+        left: 240px;
+    }
+
+    @media screen and (max-width: 800px) {
+        margin-top: 2rem;
+        position: relative;
+        left: 150px;
+    }
+
+    @media screen and (max-width: 700px) {
+        margin-top: 2rem;
+        position: relative;
+        left: 100px;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin-top: 2rem;
+        position: relative;
+        left: 20px;
     }
 }
 

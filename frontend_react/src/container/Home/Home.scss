@@ -45,8 +45,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    // min-height: 100dvh;
-    //max-height: fit-content;
     height:100%;
     background: url('../../assets/bgIMG.png') no-repeat center center / cover;
     z-index: -1; // Ensures it stays behind all other elements
@@ -54,8 +52,6 @@
     @media screen and (max-width: 750px) {
       position: absolute;
       top: 0px;
-      //width: 100%;
-      //height: 100%;
     }
     
   }
@@ -74,15 +70,16 @@
     z-index: 80;
 
     @media screen and (max-width: 750px) {
-      flex: 0.65;
-      top: 35%;
-      right: 50%;
+      flex: 1;
+      top: 580px;
+      width: 100%;
+      right: 350px;
       display: flex;
-      position: absolute; /* Ensure circles are positioned relative to this container */
+      position: absolute;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      height: 100%;
+      // height: 100%;
     }
 }
 
@@ -97,6 +94,19 @@
     flex-direction: column;
     z-index: 8;
 
+    @media screen and (max-width: 750px) {
+      width: 100%;
+      top: -500px;
+      right: -500px;
+      position: absolute;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    
+
     .badge-cmp {
       padding: 1rem 2rem;
       border: var(--white-color);
@@ -104,26 +114,20 @@
       flex-direction: row;
       text-transform: uppercase;
       width: auto;
-      background: #9caeceb6;
+      background: #8999b3d7;
 
       box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
 
-      @media screen and (max-width: 750px) {
-        margin-top: 10%;
-        padding: -2.0rem -1.0rem;
-        border: var(--white-color);
-        border-radius: 15px;
-        flex-direction: row;
-        text-transform: uppercase;
-        width: 80%;
-        height: 50%;
-        background: #c9d0dcc0;
-        position: relative;
-        top: 135px;
-        right: -150px;
-  
-        box-shadow: 0 0 20px rgba(53, 50, 50, 0);
+      p{
+        font-weight: bold;
+        color: #e2e2e2;
       }
+
+      @media screen and (max-width: 750px) {
+        width: 350px;
+      }
+
+      
 
     }
     .tag-cmp {
@@ -133,31 +137,23 @@
         flex-direction: row;
         text-transform: uppercase;
         width: auto;
-        background: #9caeceb6;
-
+        background: #8999b3d7;
         box-shadow: 0 0 20px rgba(53, 50, 50, 0.269);
 
         @media screen and (max-width: 750px) {
           padding: 0rem 2rem;
           border: var(--white-color);
-          //border-radius: 15px;
           flex-direction: row;
-          //width: 750px;
-          background: #0b295c00;
-          position: relative;
-          left: -50px;
-          top: 90px;
-  
           box-shadow: 0 0 20px rgba(53, 50, 50, 0);
         }
 
         @media screen and (max-width: 750px) {
-          padding: 0.5rem -25rem;
-          width: 600px;
-          background: #c9d0dcc0;
-          z-index: 10000;
-          position: relative;
-          top: 32.5%;
+          // padding: 0.5rem -25rem;
+          // //width: 600px;
+          // background: #9caeceb6;
+          // z-index: 1;
+          // position: relative;
+          // top: 32.5%;
         }
     }
 
@@ -169,15 +165,20 @@
             width: 100%;
             text-transform: uppercase;
             text-align: right;
-            color: rgb(255, 255, 255);
+            font-weight: bold;
+            color: #fddc6f;
 
             @media screen and (max-width: 750px) {
-              width: 36%;
+              width: 200px;
               text-transform: uppercase;
-              text-align: right;
-              color: rgb(255, 255, 255);
-              position: relative;
-              left: 45px;
+              text-align: left;
+             
+            }
+
+            @media screen and (max-width: 550px){
+              width: 290px;
+              text-transform: uppercase;
+              text-align: left;
             }
         }
     }
@@ -211,7 +212,7 @@
   z-index: 5;
 
   @media screen and (max-width: 750px){
-    z-index: 500;
+    z-index: 5;  //----------------------WE MIGHT CHANGE SOON
   }
 
   .image-holder{
@@ -244,10 +245,10 @@
 
       @media screen and (max-width: 750px) {
         position: relative;
-        top: 100px;
-        left: 530px;
+        top: 125px;
+        left: 350px;
         z-index: 11;
-        width: 45%;
+        width: 35%;
         height: 50%;
         z-index: 100;
       }
@@ -275,8 +276,8 @@
 
       @media screen and (max-width: 750px) {
         position: relative;
-        left: -350px;
-        top: -80px;
+        left: 230px;
+        top: -37px;
         z-index: 15;
       }
 
@@ -303,8 +304,6 @@
         height: 60%;
 
         @media screen and (max-width: 750px) {
-          //position: relative;
-          //right: 190px;
           width: 10px; /* Width of the orbit */
           height: 10px; /* Height of the orbit */
           
@@ -348,8 +347,8 @@
 
       .overlay_circle{
           position: absolute;
-          left: -75px;
-          top: -290px;
+          left: -480px;
+          top: -340px;
           z-index: -1;
           width: 500px;
           height: 500px;
@@ -358,7 +357,7 @@
 
           @media screen and (max-width: 750px) {
             position: relative;
-            left: -20px;
+            left: 100px;
             top: -35px;
             z-index: 100001;
             width: 500px;
@@ -381,8 +380,8 @@
         margin: 0 0;
         position: relative;
         bottom: 0px;
-        top: -40px;
-        left: -400px;
+        top: 0px;
+        left: 0px;
       }
 
       @media screen and (max-width: 750px) {
@@ -407,7 +406,7 @@
     .new-section-heading {
       font-size: 2.5rem;
       font-weight: bold;
-      color: #ffffff; // Darker text
+      color: #0264ce; // Darker text
     }
 
     .app__stats {
@@ -441,7 +440,7 @@
                 .stats-number {
                     font-size: 2.5rem;
                     font-weight: bold;
-                    color: #007BFF;
+                    color: #0264ce;
                 }
             }
         }

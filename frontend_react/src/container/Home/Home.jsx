@@ -10,7 +10,7 @@ const Home = () => {
   const [stats, setStats] = useState({ partners: 0, projects: 0 });
 
   const circles = [
-    { image: images.photoshop, angleOffset: 0 },
+    // { image: images.photoshop, angleOffset: 0 },
     { image: images.pr, angleOffset: 60 },
     { image: images.react, angleOffset: 120 },
     { image: images.python, angleOffset: 240 },
@@ -56,9 +56,6 @@ const Home = () => {
   const circleStyles = {
     transform: `rotate(${rotateAngle}deg)`,
     transition: 'transform 15s linear',
-    // position: 'relative',
-    // top: windowWidth <= 450 ? '40px' : windowWidth <= 1199 ? '0px' : windowWidth <= 1200 ? '140px' : '-140px',
-    //top: windowWidth <= 768 ? '150px' : windowWidth <= 1500 ? '140px' : '-45px',
   };
 
   return (
@@ -87,7 +84,7 @@ const Home = () => {
           <div className="tag-cmp app__flex">
             <p className="p-text">Software Developer <br /></p>
             <p className="p-text">Graphics Designer <br /></p>
-            <p className="p-text">Website Developer <br /></p>
+            <p className="p-text">AI Enthusiast <br /></p>
           </div>
         </div>
       </motion.div>

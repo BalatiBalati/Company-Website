@@ -13,12 +13,18 @@ export const abouts = defineType({
             type: 'string',
         }),
 
-        
+        defineField({
+            name:'price',
+            title:'Price',
+            type:'string'
+        }),
+
         defineField({
             name:'description',
             title:'Description',
             type:'string'
         }),
+
 
         defineField({
             name:'imgUrl',
