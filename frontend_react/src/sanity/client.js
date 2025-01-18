@@ -3,11 +3,11 @@ import {createClient} from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
 export const client = createClient({
-  projectId: 'v1f4ktqd',
+  projectId: 'balatibalati-portfolio',
   dataset: 'production',
-  apiVersion: '2024-09-15',
+  apiVersion: '2025-01-18',
   useCdn: 'true',
-  token: 'skpAjD9dtBeewwXttvz7oezXC5gS793vG1I399Um7SefiQveYHsDV7A2YpKuXOhbQUrckG9OD80EWtO8GQFrXWRIySrPr4R4wcHsfjkpwoaHFe4ujcMWpKEuEPZp5v5sOZ10TJJJtDld7g2po4spfyKRNJjov7BryQROgD0SIOvgfP8HbU5K',
+  token: 'skZ4FAND1F9wIS2jeHFqV9f2zF6lRkXV1aIM3fenY9jP2pgwsmBl25ELbdTYUpKBY5TBlYGutFaxleOG4YOh4rDOepoDbAOcLHchXK5uA79xWool1PVmbpB2L11HOt40LFZjJCF90KpayyhNcK0O0nnklyB7YDpL7CTO9SbSqQSpvQrtWLaD',
 });
 
 const builder = imageUrlBuilder(client);
