@@ -6,11 +6,11 @@ import './Home.scss';
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [rotateAngle, setRotateAngle] = useState(0);
   const [stats, setStats] = useState({ partners: 0, projects: 0 });
 
   const circles = [
-    // { image: images.photoshop, angleOffset: 0 },
     { image: images.pr, angleOffset: 60 },
     { image: images.react, angleOffset: 120 },
     { image: images.python, angleOffset: 240 },
@@ -21,6 +21,13 @@ const Home = () => {
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWindowHeight(window.innerHeight);
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
@@ -50,8 +57,18 @@ const Home = () => {
     animateStats(80, 1000, 'projects');
   }, []);
 
-  const getTranslateX = (index, circle) =>
-    windowWidth <= 750 ? 250 : 240;
+  // Updated getTranslateX function
+  const getTranslateX = (index, circle) => {
+    if (windowWidth <= 750) {
+      return 250; // For smaller screens (<= 750px)
+    } else if (windowHeight <= 750) {
+      return 100; // For very small height (<= 750px)
+    } else if (windowHeight <= 850) {
+      return 210; // For taller screens (<= 850px) but wide screens
+    } else {
+      return 240; // Default value for larger screens
+    }
+  };
 
   const circleStyles = {
     transform: `rotate(${rotateAngle}deg)`,
@@ -71,7 +88,7 @@ const Home = () => {
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
             {windowWidth > 750 && <span>😉</span>}
-            <div 
+            <div
               style={{
                 marginLeft: windowWidth < 750 ? -170 : 20, // Conditional margin
               }}
@@ -91,7 +108,6 @@ const Home = () => {
 
       <div className="bottom-holder">
         <div className="image-holder">
-            
           <img className='hero-image' src={images.profile} alt="profile_bg" />
           <motion.div
             className="app__header-circles"
@@ -111,7 +127,10 @@ const Home = () => {
                 <motion.img
                   src={circle.image}
                   alt="circle"
-                  style={{ width: '60px', height: '60px' }}
+                  style={{
+                    width: windowHeight < 850 ? '53px' : '60px',
+                    height: windowHeight < 850 ? '53px' : '60px',
+                  }}
                 />
               </div>
             ))}
@@ -121,7 +140,6 @@ const Home = () => {
             transition={{ duration: 0.5, delayChildren: 0.5 }}
             className="app__header-img"
           >
-
             <motion.img
               whileInView={{ scale: [0, 1] }}
               transition={{ duration: 1, ease: 'easeInOut' }}
@@ -131,8 +149,6 @@ const Home = () => {
             />
           </motion.div>
         </div>
-
-
 
         <div className="app__new-section">
           <h2 className="new-section-heading">DISCOVER MY WORK</h2>

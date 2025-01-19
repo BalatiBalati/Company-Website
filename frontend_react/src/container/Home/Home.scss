@@ -23,7 +23,6 @@
   flex: 1;
   width: 100%;
   height: 0%;
-  //flex-direction: row;
   padding: 6rem 2rem 0;
   z-index: 11000;
 
@@ -105,7 +104,6 @@
       flex-direction: column;
     }
 
-    
 
     .badge-cmp {
       padding: 1rem 2rem;
@@ -125,6 +123,16 @@
 
       @media screen and (max-width: 750px) {
         width: 350px;
+      }
+
+      
+      @media screen and (max-height: 850px){
+        p{
+          width: 150px;
+          font-size: small;
+        }
+        height: 180px;
+        font-size: smaller;
       }
 
       
@@ -154,6 +162,11 @@
           // z-index: 1;
           // position: relative;
           // top: 32.5%;
+        }
+
+        @media screen and (max-height: 850px){
+          // width: 10%;
+          // height: 10%;
         }
     }
 
@@ -226,7 +239,7 @@
       width: 400px;
       position: absolute;
       left: 50%;
-      top: 10px;
+      top: 13px;
       transform: translate(-50%);
       object-fit: contain;
       z-index: 20;
@@ -235,12 +248,11 @@
       @media screen and (max-width: 1500px) {
         position: relative;
         left: 170px;
-        //top: 10px;
       }
 
       @media screen and (min-width: 1500px) {
         position: relative;
-        top: 0px;
+        top: 10px;
       }
 
       @media screen and (max-width: 750px) {
@@ -251,6 +263,24 @@
         width: 35%;
         height: 50%;
         z-index: 100;
+      }
+
+      @media screen and (max-height: 850px){
+        
+        position: relative;
+        width: 400px;
+        height: 400px;
+        // left: 50px;
+        // top: 125px;
+        // z-index: 15;
+      }
+
+      @media screen and (max-height: 750px){
+        width: 350px;
+        height: 350px;
+        position: relative;
+        left: 155px;
+        // top: -335px;
       }
     }
 
@@ -280,6 +310,21 @@
         top: -37px;
         z-index: 15;
       }
+      
+      @media screen and (max-height: 850px){
+        position: absolute; /* Ensure circles are positioned relative to this container */
+        left: 7%;
+        top: 11%;
+      }
+
+      @media screen and (max-height: 750px){
+        // width: 300px;
+        // height: 300px;
+        position: absolute;
+        // left: -350px;
+        // top: -265px;
+        // z-index: 15;
+      }
 
       div {
         position: absolute;
@@ -297,17 +342,19 @@
           height: 80px; /* Height of the orbit */
           
         }
+
+        @media screen and (max-height: 850px) { /* Adjust 500px to your preference */
+          width: 80px; /* Width of the orbit */
+          height: 80px; /* Height of the orbit */
+
+        }
       }
     
       img {
         width: 60%; /* Size of the image inside the circle */
         height: 60%;
 
-        @media screen and (max-width: 750px) {
-          width: 10px; /* Width of the orbit */
-          height: 10px; /* Height of the orbit */
-          
-        }
+        
       }
     }
 
@@ -343,6 +390,7 @@
             left: 0px;
             z-index: 11;
           }
+          
       }
 
       .overlay_circle{
@@ -374,6 +422,25 @@
             transform: translate(-50%, -50%);
             z-index: 10;
           }
+
+          @media screen and (max-height: 850px){
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: -455px;
+            top: -335px;
+          }
+
+          @media screen and (max-height: 750px){
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: -350px;
+            top: -265px;
+            // z-index: 15;
+          }
+
+
       }
       
       @media screen and (max-width: 1500px) {
@@ -388,6 +455,18 @@
         position: relative;
         right: 0px;
       }
+
+      @media screen and (max-height: 850px){
+        
+        position: relative;
+        left: 50px;
+        top: 125px;
+        // z-index: 15;
+      }
+
+      
+
+      
     }
   }
 
@@ -397,11 +476,21 @@
     // display: block;
     left: 0%;
     bottom: 0; 
-    padding: 1.9rem 2rem;
+    height: 212px;
+    padding: 1.5rem 2rem;
     z-index: 15;
     background: linear-gradient(to right, rgba(200, 200, 200) 40%, rgb(200, 200, 200) 40%); /* Gradient goes from transparent to solid horizontally */
     text-align: center; // Center align text and content
     z-index: 100231;
+
+    
+    @media screen and (max-height: 850px){
+      height: 225px;
+    }
+
+    @media screen and (max-height: 850px){
+      height: 215px;
+    }
   
     .new-section-heading {
       font-size: 2.5rem;
