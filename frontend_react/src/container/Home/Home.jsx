@@ -61,8 +61,8 @@ const Home = () => {
   const getTranslateX = (index, circle) => {
     if (windowWidth <= 750) {
       return 250; // For smaller screens (<= 750px)
-    } else if (windowHeight <= 750) {
-      return 100; // For very small height (<= 750px)
+    } else if (windowHeight <= 700) {
+      return 190; // For very small height (<= 750px)
     } else if (windowHeight <= 850) {
       return 210; // For taller screens (<= 850px) but wide screens
     } else {
@@ -128,8 +128,18 @@ const Home = () => {
                   src={circle.image}
                   alt="circle"
                   style={{
-                    width: windowHeight < 850 ? '53px' : '60px',
-                    height: windowHeight < 850 ? '53px' : '60px',
+                    width:
+                    windowHeight < 700
+                      ? '40px'
+                      : windowHeight < 850
+                      ? '53px'
+                      : '60px', // Default
+                  height:
+                    windowHeight < 700
+                      ? '40px'
+                      : windowHeight < 850
+                      ? '53px'
+                      : '60px', // Default
                   }}
                 />
               </div>
