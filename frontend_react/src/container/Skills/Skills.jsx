@@ -1,30 +1,60 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { client, urlFor } from '../../sanity/client';
-
 import "./Skills.scss";
 
 const Skills = () => {
-  const [experience, setExperience] = useState([]);
-  const [skills, setSkills] = useState([]);
+  // Static data to replace backend data
+  const experience = [
+    {
+      year: '2023',
+      works: [
+        {
+          name: 'Frontend Developer',
+          company: 'Tech Co.',
+          desc: 'Developed modern user interfaces with React.',
+        },
+        {
+          name: 'UI Designer',
+          company: 'Creative Agency',
+          desc: 'Designed intuitive UI layouts for web applications.',
+        },
+      ],
+    },
+    {
+      year: '2022',
+      works: [
+        {
+          name: 'Backend Developer',
+          company: 'Startup Inc.',
+          desc: 'Implemented robust REST APIs with Node.js.',
+        },
+      ],
+    },
+  ];
 
-  useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
-
-    client.fetch(query)
-      .then((data) => {
-        setExperience(data);
-      });
-
-    client.fetch(skillsQuery)
-      .then((data) => {
-        setSkills(data);
-      });
-  }, []);
+  const skills = [
+    {
+      name: 'JavaScript',
+      bgColor: '#F0DB4F',
+      icon: 'https://path-to-your-javascript-icon.png',
+      level: 90,
+    },
+    {
+      name: 'React',
+      bgColor: '#61DBFB',
+      icon: 'https://path-to-your-react-icon.png',
+      level: 85,
+    },
+    {
+      name: 'CSS',
+      bgColor: '#264de4',
+      icon: 'https://path-to-your-css-icon.png',
+      level: 80,
+    },
+  ];
 
   return (
     <div className="skills__app-wrapper">
@@ -41,7 +71,7 @@ const Skills = () => {
                 key={skill.name}
               >
                 <div className="app__flex" style={{ backgroundColor: skill.bgColor }}>
-                  <img src={urlFor(skill.icon)} alt={skill.name} />
+                  <img src={skill.icon} alt={skill.name} />
                 </div>
                 <p className="p-text">{skill.name}</p>
 
@@ -59,7 +89,7 @@ const Skills = () => {
             ))}
           </motion.div>
           <motion.div className="app__skills-exp">
-            {experience?.map((exp) => (
+            {experience.map((exp) => (
               <motion.div
                 className="app__skills-exp-item"
                 key={exp.year}
@@ -68,7 +98,7 @@ const Skills = () => {
                   <p className="bold-text">{exp.year}</p>
                 </div>
                 <motion.div className="app__skills-exp-work">
-                  {exp?.works?.map((work) => (
+                  {exp.works.map((work) => (
                     <React.Fragment key={work.name}>
                       <motion.div
                         whileInView={{ opacity: [0, 1] }}

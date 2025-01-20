@@ -3,6 +3,7 @@
     background-color: rgba(3, 85, 110, 0.479);  /* Set background color to cyan */
     padding-right: 4rem;     
     padding-left: 4rem;        /* Add padding around the content */
+    
     border-radius: 15px;      /* Optional rounded corners */
     position: relative;
     top: 6.75%;
@@ -37,13 +38,11 @@
 }
 
 .app__rows {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 2rem; /* Space between the columns */
-    width: 100%;
+    display: flex;
+    width: 55%;
     z-index: 9999;
-    max-width: 1400px; /* Limit maximum width */
-    margin: 1rem auto;
+    max-width: 1700px; /* Limit maximum width */
+    margin: -0.25rem auto;
 }
 
 .app__row {
@@ -51,6 +50,7 @@
     flex-direction: column;
     align-items: center; /* Center items within each row */
     text-align: center; /* Center text inside the rows */
+    // width: 100%;
     padding: 1.5rem;
     background-color: #f5f5f5; /* Light background for visual distinction */
     border-radius: 15px; /* Rounded corners for sections */
@@ -94,7 +94,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin: 2rem;
+   
+    margin: 7rem;
 
     img {
         width: 100%;
