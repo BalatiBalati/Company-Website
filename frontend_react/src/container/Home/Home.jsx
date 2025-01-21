@@ -87,7 +87,7 @@ const Home = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            {windowWidth > 750 && <span>😉</span>}
+            {/* {windowWidth > 750 && <span>😉</span>} */}
             <div
               style={{
                 marginLeft: windowWidth < 750 ? -170 : 20, // Conditional margin
@@ -98,11 +98,11 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="tag-cmp app__flex">
+          {/* <div className="tag-cmp app__flex">
             <p className="p-text">Software Developer <br /></p>
             <p className="p-text">Graphics Designer <br /></p>
             <p className="p-text">AI Enthusiast <br /></p>
-          </div>
+          </div> */}
         </div>
       </motion.div>
 

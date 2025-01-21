@@ -487,17 +487,22 @@
   }
 
   .app__new-section {
-    width: 100dvw;
+    width: 40%;
     position: relative;
-    // display: block;
+    /* display: block; */
     left: 0%;
-    bottom: 0; 
+    bottom: 0;
     height: 212px;
     padding: 1.5rem 2rem;
-    z-index: 15;
-    background: linear-gradient(to right, rgba(200, 200, 200) 40%, rgb(200, 200, 200) 40%); /* Gradient goes from transparent to solid horizontally */
-    text-align: center; // Center align text and content
     z-index: 100231;
+    /* Colors: 
+       00003b - blue 
+       edf2f8 - gray 
+    */
+    background: #00003b; /* Solid blue background */
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+    text-align: center; /* Center align text */
+    
 
     
     @media screen and (max-height: 850px){
@@ -538,7 +543,7 @@
                 .stats-heading {
                     font-size: 1.2rem;
                     font-weight: bold;
-                    color: #444;
+                    color: #ffffff;
                     margin-bottom: 0.5rem;
                 }
 

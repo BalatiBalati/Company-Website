@@ -12,7 +12,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navbar, .about, .work, .skills, .testimonials, .footer {
+.navbar, .about, .work, .home, .skills, .testimonials, .footer {
   position: relative;
   z-index: 10; /* Keep the other sections on top of blobs */
 }

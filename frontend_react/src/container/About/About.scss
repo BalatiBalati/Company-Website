@@ -94,8 +94,14 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-   
-    margin: 7rem;
+    padding-bottom: 30px; /* Adjusted to a valid positive value */
+    /* Only apply horizontal margins */
+    margin-left: 7rem;
+    margin-right: 7rem;
+    /* Optional: no vertical margins if needed */
+    margin-top: 0;
+    margin-bottom: 0;
+    
 
     img {
         width: 100%;
