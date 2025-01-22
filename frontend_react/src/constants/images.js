@@ -17,6 +17,10 @@ import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
 
+import Graphics_desgn from '../assets/Graphics_desgn.png';
+import web_dev from '../assets/web_dev.png';
+import mobile_dev from '../assets/mobile_dev.png';
+
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
@@ -43,6 +47,9 @@ import pr from '../assets/pr.png';
 
 
 export default {
+    Graphics_desgn,
+    web_dev,
+    mobile_dev,
     pr,
     photoshop,
     c_sharp,

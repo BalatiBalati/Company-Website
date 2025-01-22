@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { images } from '../../constants';
 import './About.scss';
 
 const About = () => {
@@ -8,20 +9,20 @@ const About = () => {
     {
       _id: '1',
       title: 'Web Development',
-      imgUrl: '/images/web-development.png', // Replace with your actual image path
-      description: 'Creating modern and responsive web applications tailored to your needs.',
+      imgUrl: images.web_dev, // Replace with your actual image path
+      description: 'Combining design, functionality, and performance to deliver attractive and scalable website solutions.',
     },
     {
       _id: '2',
-      title: 'AI Solutions',
-      imgUrl: '/images/ai-solutions.png', // Replace with your actual image path
-      description: 'Providing cutting-edge AI solutions to enhance your business efficiency.',
+      title: 'Mobile Application Development',
+      imgUrl: images.mobile_dev, // Replace with your actual image path
+      description: 'Designing and building intuitive, high-performance mobile apps tailored for seamless user engagement and functionality.',
     },
     {
       _id: '3',
-      title: 'UI/UX Design',
-      imgUrl: '/images/ui-ux-design.png', // Replace with your actual image path
-      description: 'Crafting intuitive and user-friendly designs for seamless user experiences.',
+      title: 'Digital Designer',
+      imgUrl: images.Graphics_desgn, // Replace with your actual image path
+      description: 'Specializing in creating dynamic motion graphics and visually compelling designs that elevate brands and enhance user experiences.',
     },
   ];
 
