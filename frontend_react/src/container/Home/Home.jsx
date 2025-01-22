@@ -89,8 +89,8 @@ const Home = () => {
       }, 16);
     };
 
-    animateStats(5, 1000, 'partners');
-    animateStats(80, 1000, 'projects');
+    animateStats(3, 1000, 'partners');
+    animateStats(10, 1000, 'projects');
   }, []);
 
   // Updated getTranslateX function
