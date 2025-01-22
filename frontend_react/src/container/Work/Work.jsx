@@ -12,6 +12,21 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   // Static array of works
+
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard({ y: 100, opacity: 0 });
+
+    setTimeout(() => {
+      setAnimateCard({ y: 0, opacity: 1 });
+      if (item === 'All') {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
+  };
+  
   const works = [
     {
       title: "Website Project 1",
@@ -41,26 +56,14 @@ const Work = () => {
 
   const [filterWork, setFilterWork] = useState(works);
 
-  const handleWorkFilter = (item) => {
-    setActiveFilter(item);
-    setAnimateCard({ y: 100, opacity: 0 });
 
-    setTimeout(() => {
-      setAnimateCard({ y: 0, opacity: 1 });
-      if (item === 'All') {
-        setFilterWork(works);
-      } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
-      }
-    }, 500);
-  };
 
   return (
     <div className="app__works"> {/* Added a container div for centering */}
       <h2 className="head-text">My <span> Portfolio </span></h2>
 
       <div className="app__work-filter">
-        {['Website Applications', 'Game Development', 'Robotics & Artificial Intelligence', 'All'].map((item, index) => (
+        {['All', 'Website Applications', 'Game Development', 'Robotics & Artificial Intelligence'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}

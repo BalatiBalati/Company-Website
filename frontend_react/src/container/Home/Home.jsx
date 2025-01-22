@@ -10,6 +10,15 @@ const Home = () => {
   const [rotateAngle, setRotateAngle] = useState(0);
   const [stats, setStats] = useState({ partners: 0, projects: 0 });
 
+  const [displayText, setDisplayText] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  const words = ['Software Engineer', 'Web Developer', 'Graphics Designer'];
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
+  const delayBetweenWords = 3000;
+
   const circles = [
     { image: images.pr, angleOffset: 60 },
     { image: images.react, angleOffset: 120 },
@@ -18,6 +27,33 @@ const Home = () => {
     { image: images.c_sharp, angleOffset: 240 },
     { image: images.photoshop, angleOffset: -60 },
   ];
+
+  useEffect(() => {
+    let timer;
+    const currentWord = words[wordIndex];
+
+    if (isDeleting) {
+      timer = setTimeout(() => {
+        setDisplayText(currentWord.substring(0, displayText.length - 1));
+        if (displayText.length === 1) {
+          setIsDeleting(false);
+          setWordIndex((prev) => (prev + 1) % words.length);
+        }
+      }, deletingSpeed);
+    } else {
+      timer = setTimeout(() => {
+        setDisplayText(currentWord.substring(0, displayText.length + 1));
+        if (displayText.length === currentWord.length) {
+          timer = setTimeout(() => {
+            setIsDeleting(true);
+          }, delayBetweenWords);
+        }
+      }, typingSpeed);
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, wordIndex]);
+
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -87,24 +123,35 @@ const Home = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            {/* {windowWidth > 750 && <span>😉</span>} */}
+            {windowWidth > 750 && <span>👋🏽</span>}
             <div
               style={{
                 marginLeft: windowWidth < 750 ? -170 : 20, // Conditional margin
               }}
             >
               <p className="p-text">Hi there! My name is</p>
-              <h1 className="head-text"><span>BALATI<br />BALATI</span></h1>
+              <h1 className="head-text"><span2>BALATI<br />BALATI</span2></h1>
             </div>
           </div>
 
+          
           {/* <div className="tag-cmp app__flex">
             <p className="p-text">Software Developer <br /></p>
             <p className="p-text">Graphics Designer <br /></p>
             <p className="p-text">AI Enthusiast <br /></p>
           </div> */}
+
+          <div className= 'Typewrite_Container'>
+            <div className='typewrite_content'>
+              {/* <span className='static-text'>I am a </span> */}
+              <span className='dynamic-text'><span>{displayText}</span></span>
+              <span className='cursor'>|</span>
+            </div>
+          </div>
         </div>
+        
       </motion.div>
+
 
       <div className="bottom-holder">
         <div className="image-holder">

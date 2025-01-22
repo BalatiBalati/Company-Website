@@ -104,8 +104,12 @@ body, html {
   color: var(--white-color);
   text-transform: capitalize;
 
+  span2{
+    color: #ffff;
+  }
+
   span {
-    color: #ffffff;
+    color: #3498db;
   }
 
   @media screen and (min-width: 2000px) {

@@ -85,7 +85,7 @@
 .app__header-badge {
     width: auto;
     top: -50%;
-    right: -70%;
+    right: -80%;
     position: relative; /* Ensure circles are positioned relative to this container */
     display: flex;
     justify-content: flex-start;
@@ -212,6 +212,69 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
+}
+.Typewrite_Container {
+  position: relative;
+  top: 85px;
+  left: 1090px;
+  width: 700px;
+
+  @media screen and (max-width: 1500px) {
+    position: relative;
+    top: -75px;
+    left: 790px;
+    width: 700px;
+  }
+}
+
+.typewriter-content {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  z-index: 9999999999999999999;
+}
+
+.typewriter-content .static-text {
+  color: #116ef1;
+}
+
+.typewriter-content .dynamic-text {
+  p {
+    color: #2563eb; /* En*/
+  }
+  color: #2563eb; /* Ensures this color is applied */
+  font-weight: 700;
+}
+
+.typewriter-content .cursor {
+  display: inline-block;
+  margin-left: 0.25rem;
+  color: #2563eb; /* Matches the dynamic-text color */
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 640px) {
+  .Typewrite_Container {
+    margin: 1rem;
+    padding: 2rem;
+  }
+
+  .typewriter-content {
+    font-size: 1rem;
+  }
+
+  .typewriter-title {
+    font-size: 1.5rem;
+  }
 }
 
 
@@ -487,7 +550,7 @@
   }
 
   .app__new-section {
-    width: 40%;
+    width: 100vw;
     position: relative;
     /* display: block; */
     left: 0%;
@@ -498,8 +561,9 @@
     /* Colors: 
        00003b - blue 
        edf2f8 - gray 
+       #070777
     */
-    background: #00003b; /* Solid blue background */
+    background: linear-gradient(to bottom, #d2d9e3 30%, #d2d9e3 60%); /* Solid blue background */
     border-radius: 15px 15px 0 0; /* Rounded top corners */
     text-align: center; /* Center align text */
     
