@@ -51,11 +51,12 @@
     flex-direction: column;
     align-items: center; /* Center items within each row */
     text-align: center; /* Center text inside the rows */
-    // width: 100%;
+    width: 70%;
     position: relative;
+    right: -115px;
     top: -2.0rem;
-    padding: 0.5rem;
-    background-color: rgba(3, 85, 110, 0); /* Light background for visual distinction */
+    padding: 1.5rem;
+    background-color: rgba(3, 85, 110, 0.829); /* Light background for visual distinction */
     border-radius: 15px; /* Rounded corners for sections */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0);
 

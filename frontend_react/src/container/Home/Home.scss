@@ -215,9 +215,17 @@
 }
 .Typewrite_Container {
   position: relative;
-  top: 85px;
+  top: 35px;
   left: 1090px;
   width: 700px;
+
+  // @media screen and (min-width: 1500px) {
+  //   position: relative;
+  //   top: 50px;
+  //   left: 0px;
+  //   width: 700px;
+    
+  // }
 
   @media screen and (max-width: 1500px) {
     position: relative;

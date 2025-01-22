@@ -44,9 +44,30 @@ import c_sharp from '../assets/c_sharp.png';
 import photoshop from '../assets/photoshop.png';
 import pr from '../assets/pr.png';
 
+import Pacman from '../assets/Pacman.png';
+import Tutor from '../assets/Tutor.png';
+import Fruitbot from '../assets/Fruitbot.png';
+
+import mysql from '../assets/mysql.png';
+import raspi from '../assets/raspi.png';
+import mongo from '../assets/mongodb-icon.png';
+import git from '../assets/git.png';
+import pytorch from '../assets/pytorch.png';
+import arduino from '../assets/arduino.png';
+import illustrator from '../assets/illustrator.png';
 
 
 export default {
+    illustrator,
+    mysql,
+    raspi,
+    mongo,
+    git,
+    pytorch,
+    arduino,
+    Pacman,
+    Tutor,
+    Fruitbot,
     Graphics_desgn,
     web_dev,
     mobile_dev,

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 //import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { Eye, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { images } from '../../constants';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 
@@ -29,27 +30,27 @@ const Work = () => {
   
   const works = [
     {
-      title: "Website Project 1",
-      description: "A sample website project.",
-      imgUrl: "/path/to/sample-image-1.png",
-      projectLink: "https://example.com/project1",
-      codeLink: "https://github.com/example/project1",
+      title: "Online Tutor",
+      description: "A Vue JS online tutor website application created for Mauritian primary students.",
+      imgUrl: images.Tutor,
+      projectLink: "https://balatibalati.github.io/TuitionApp/",
+      codeLink: "https://github.com/BalatiBalati/TuitionApp.git",
       tags: ["Website Applications"],
     },
     {
-      title: "Game Project 1",
-      description: "A sample game development project.",
-      imgUrl: "/path/to/sample-image-2.png",
-      projectLink: "https://example.com/project2",
-      codeLink: "https://github.com/example/project2",
+      title: "PacWars",
+      description: "In this Star Wars-themed Pac-Man game, help R2-D2 navigate through the Death Star, avoiding enemies stormtroopers.",
+      imgUrl: images.Pacman,
+      projectLink: "http://localhost:8000/",
+      codeLink: "https://github.com/BalatiBalati/Python-PacWars_Game.git",
       tags: ["Game Development"],
     },
     {
-      title: "AI Project 1",
-      description: "A robotics and AI project.",
-      imgUrl: "/path/to/sample-image-3.png",
+      title: "FruitBot",
+      description: "A fruit classification robotic arm, capable automatically detecting the type of fruit and its condition. (Rotten/Ripe)",
+      imgUrl: images.Fruitbot,
       projectLink: "https://example.com/project3",
-      codeLink: "https://github.com/example/project3",
+      codeLink: "https://github.com/BalatiBalati/FruitBot.git",
       tags: ["Robotics & Artificial Intelligence"],
     },
   ];

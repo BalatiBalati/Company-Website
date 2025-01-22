@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
+import { images } from '../../constants';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import "./Skills.scss";
@@ -9,12 +10,12 @@ const Skills = () => {
   // Static data to replace backend data
   const experience = [
     {
-      year: '2023',
+      year: '2024 - Present',
       works: [
         {
-          name: 'Frontend Developer',
-          company: 'Tech Co.',
-          desc: 'Developed modern user interfaces with React.',
+          name: 'Digital Intern',
+          company: 'Middlesex University',
+          desc: 'Assisted in website designing and maintenance, videography and photography for the Mauritian based University',
         },
         {
           name: 'UI Designer',
@@ -24,12 +25,32 @@ const Skills = () => {
       ],
     },
     {
-      year: '2022',
+      year: '2023',
       works: [
         {
-          name: 'Backend Developer',
-          company: 'Startup Inc.',
-          desc: 'Implemented robust REST APIs with Node.js.',
+          name: 'Graphics & Website Designer',
+          company: 'Tanzania ICT Commission',
+          desc: 'Helped in the designing of their new entry cards, as well as assisted in refurbishing the design for their website.',
+        },
+      ],
+    },
+    {
+      year: '2021',
+      works: [
+        {
+          name: 'Project Co-Ordinator & Teacher',
+          company: 'She Codes for Change',
+          desc: 'Lead, managed and taught coding skills to a group of youth within the country of Tanzania',
+        },
+      ],
+    },
+    {
+      year: '2016',
+      works: [
+        {
+          name: 'Animations Specialist',
+          company: 'Tanzania Bora Initiative',
+          desc: 'Scripted, story boarded, designed and created animations aimed at advocating for equality',
         },
       ],
     },
@@ -38,21 +59,93 @@ const Skills = () => {
   const skills = [
     {
       name: 'JavaScript',
-      bgColor: '#F0DB4F',
-      icon: 'https://path-to-your-javascript-icon.png',
-      level: 90,
+      bgColor: '#3498db',
+      icon: images.javascript,
+      level: 81,
     },
     {
-      name: 'React',
-      bgColor: '#61DBFB',
-      icon: 'https://path-to-your-react-icon.png',
-      level: 85,
+      name: 'MySQL',
+      bgColor: '#3498db',
+      icon: images.mysql,
+      level: 70,
     },
     {
       name: 'CSS',
-      bgColor: '#264de4',
-      icon: 'https://path-to-your-css-icon.png',
+      bgColor: '#3498db',
+      icon: images.sass,
       level: 80,
+    },
+    {
+      name: 'Mongo DB',
+      bgColor: '#3498db',
+      icon: images.mongo,
+      level: 42,
+    },
+    {
+      name: 'React',
+      bgColor: '#3498db',
+      icon: images.react,
+      level: 80,
+    },
+    {
+      name: 'C-Sharp',
+      bgColor: '#3498db',
+      icon: images.c_sharp,
+      level: 48,
+    },
+    {
+      name: 'Git',
+      bgColor: '#3498db',
+      icon: images.git,
+      level: 64,
+    },
+    {
+      name: 'Premier',
+      bgColor: '#3498db',
+      icon: images.pr,
+      level: 62,
+    },
+    {
+      name: 'Photoshop',
+      bgColor: '#3498db',
+      icon: images.photoshop,
+      level: 68,
+    },
+    {
+      name: 'Raspberry Pi',
+      bgColor: '#3498db',
+      icon: images.raspi,
+      level: 90,
+    },
+    {
+      name: 'Python',
+      bgColor: '#3498db',
+      icon: images.python,
+      level: 85,
+    },
+    {
+      name: 'Pytorch',
+      bgColor: '#3498db',
+      icon: images.pytorch,
+      level: 80,
+    },
+    {
+      name: 'Figma',
+      bgColor: '#3498db',
+      icon: images.figma,
+      level: 71,
+    },
+    {
+      name: 'Arduino',
+      bgColor: '#3498db',
+      icon: images.arduino,
+      level: 74,
+    },
+    {
+      name: 'Illustrator',
+      bgColor: '#3498db',
+      icon: images.illustrator || 'https://path-to-placeholder-image.png', // Fallback for missing image
+      level: 21,
     },
   ];
 

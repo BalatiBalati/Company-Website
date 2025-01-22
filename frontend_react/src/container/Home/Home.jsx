@@ -17,7 +17,7 @@ const Home = () => {
   const words = ['Software Engineer', 'Web Developer', 'Graphics Designer'];
   const typingSpeed = 100;
   const deletingSpeed = 50;
-  const delayBetweenWords = 3000;
+  const delayBetweenWords = 1000;
 
   const circles = [
     { image: images.pr, angleOffset: 60 },
@@ -117,8 +117,8 @@ const Home = () => {
         <img className="app__header-bg-img" />
       </div>
       <motion.div
-        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
+        whileInView={{ x: [0, 0], opacity: [1, 1] }}
+        transition={{ duration: 0 }}
         className="app__header-info"
       >
         <div className="app__header-badge">
@@ -193,13 +193,13 @@ const Home = () => {
             ))}
           </motion.div>
           <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5, delayChildren: 0.5 }}
+            whileInView={{ opacity: [1, 1] }}
+            transition={{ duration: 0}}
             className="app__header-img"
           >
             <motion.img
-              whileInView={{ scale: [0, 1] }}
-              transition={{ duration: 1, ease: 'easeInOut' }}
+              whileInView={{ scale: [1, 1] }}
+              transition={{ duration: 0}}
               src={images.circle}
               alt="profile_circle"
               className="overlay_circle"

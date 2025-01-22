@@ -29,17 +29,19 @@ const About = () => {
   return (
     
       <div className="app__about">
+        {/* <span> */}
+          <h2 className="head-text">
+            <br />
+            About <span>Me</span>
+          </h2>
+        {/* </span> */}
         <div className="app__rows">
+          
           <div className="app__row body-text">
-            <span>
-              <h2 className="head-text">
-                <br />
-                About <span>Me</span>
-              </h2>
-            </span>
+
             <p className="body-text">
               I am a <b><span>software development</span></b> and <b><span>AI enthusiast</span></b>, with a passion for merging cutting-edge technology with creative flair.
-              One thing to note about me, whether creating <b><span>software solutions</span></b>, <br/>crafting eye-catching <b><span>animations</span></b>, designing intuitive <b><span>websites</span></b>,<br /> or time-capsuling moments through <b><span>videography</span> and <span>photography</span></b>;
+              One thing to note about me, whether creating <b><span>software solutions</span></b>, <br/>crafting eye-catching <b><span>animations</span></b>, designing intuitive <b><span>websites</span></b>,<br /> or time-capsuling moments through <b><span><br/>videography</span> and <span>photography</span></b>;
               <br />
               <br />
               
