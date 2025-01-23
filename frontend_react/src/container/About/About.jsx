@@ -30,12 +30,14 @@ const About = () => {
     
       <div className="app__about">
         {/* <span> */}
-          <h2 className="head-text">
+
+        {/* </span> */}
+        <div className="app__rows">
+
+        <h2 className="head-text">
             <br />
             About <span>Me</span>
           </h2>
-        {/* </span> */}
-        <div className="app__rows">
           
           <div className="app__row body-text">
 

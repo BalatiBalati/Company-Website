@@ -11,6 +11,7 @@
     width: 100%;              /* Ensure it spans full width */
     max-width: 1500px;        /* Optional, limit the maximum width */
     margin: 2rem auto;        /* Center the box horizontally with margin */
+
     
 }
 
@@ -39,6 +40,9 @@
 
 .app__rows {
     display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items within each row */
+    text-align: center; /* Center text inside the rows */
     width: 55%;
     z-index: 9999;
     max-width: 1700px; /* Limit maximum width */
@@ -53,7 +57,7 @@
     text-align: center; /* Center text inside the rows */
     width: 70%;
     position: relative;
-    right: -115px;
+    right: 2.5px;
     top: -2.0rem;
     padding: 1.5rem;
     background-color: rgba(3, 85, 110, 0.829); /* Light background for visual distinction */

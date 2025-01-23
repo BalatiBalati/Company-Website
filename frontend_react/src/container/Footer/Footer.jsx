@@ -1,47 +1,35 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import SocialMedia from '../../components/SocialMedia';
 import './Footer.scss';
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const form = useRef();
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const { name, email, message } = formData;
-
-  const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent page reload
+  const sendEmail = (e) => {
+    e.preventDefault();
     setLoading(true);
     setError(null);
 
     emailjs
-      .send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
-        {
-          from_name: name,
-          from_email: email,
-          message: message,
-        },
-        'YOUR_USER_ID' // Replace with your EmailJS User ID
+      .sendForm(
+        'service_oy6fekp', // Replace with your EmailJS Service ID
+        'template_cud2sbb', // Replace with your EmailJS Template ID
+        form.current,
+        'LtoF0lbzPMqA9yPy2' // Replace with your EmailJS Public Key
       )
       .then(
-        (response) => {
-          console.log('Message sent successfully:', response);
+        () => {
           setLoading(false);
           setIsFormSubmitted(true);
         },
         (error) => {
-          console.error('Failed to send message:', error);
+          console.error('Failed to send message:', error.text);
           setLoading(false);
           setError('Error sending message. Please try again.');
         }
@@ -65,15 +53,13 @@ const Footer = () => {
       </div>
 
       {!isFormSubmitted ? (
-        <form className="app__footer-form app__flex" onSubmit={handleSubmit}>
+        <form ref={form} className="app__footer-form app__flex" onSubmit={sendEmail}>
           <div className="app__flex">
             <input
               className="p-text"
               type="text"
               placeholder="Your Name"
-              name="name"
-              value={name}
-              onChange={handleChangeInput}
+              name="user_name"
               required
             />
           </div>
@@ -82,9 +68,7 @@ const Footer = () => {
               className="p-text"
               type="email"
               placeholder="Your Email"
-              name="email"
-              value={email}
-              onChange={handleChangeInput}
+              name="user_email"
               required
             />
           </div>
@@ -93,9 +77,7 @@ const Footer = () => {
             <textarea
               className="p-text"
               placeholder="Your Message"
-              value={message}
               name="message"
-              onChange={handleChangeInput}
               required
             />
           </div>
