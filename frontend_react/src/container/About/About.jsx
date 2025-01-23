@@ -42,12 +42,10 @@ const About = () => {
           <div className="app__row body-text">
 
             <p className="body-text">
-              I am a <b><span>software development</span></b> and <b><span>AI enthusiast</span></b>, with a passion for merging cutting-edge technology with creative flair.
-              One thing to note about me, whether creating <b><span>software solutions</span></b>, <br/>crafting eye-catching <b><span>animations</span></b>, designing intuitive <b><span>websites</span></b>,<br /> or time-capsuling moments through <b><span><br/>videography</span> and <span>photography</span></b>;
-              <br />
-              <br />
-              
-                <b>I enjoy bringing ideas to life in unexpected ways. <br /></b>
+              <b>Driven by <span>curiosity</span> and a <span>love for technology</span>, I specialize in blending <span>AI</span> with <span>creativity</span> to push boundaries and deliver exceptional <span>software</span>, <span>websites</span>, <span>animations</span>, and <span>visual narratives.</span></b>
+
+              {/* I am a <b><span>software development</span></b> and <b><span>AI enthusiast</span></b>, with a passion for merging cutting-edge technology with creative flair.
+              One thing to note about me, whether creating <b><span>software solutions</span></b>, <br/>crafting eye-catching <b><span>animations</span></b>, designing intuitive <b><span>websites</span></b>,<br /> or time-capsuling moments through <b><span><br/>videography</span> and <span>photography</span></b>; */}
               
             </p>
           </div>

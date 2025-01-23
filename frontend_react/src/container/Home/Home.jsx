@@ -16,8 +16,8 @@ const Home = () => {
   
   const words = ['Software Engineer', 'Web Developer', 'Graphics Designer'];
   const typingSpeed = 100;
-  const deletingSpeed = 50;
-  const delayBetweenWords = 1000;
+  const deletingSpeed = 100;
+  const delayBetweenWords = 2500;
 
   const circles = [
     { image: images.pr, angleOffset: 60 },
@@ -93,19 +93,22 @@ const Home = () => {
     animateStats(10, 1000, 'projects');
   }, []);
 
-  // Updated getTranslateX function
   const getTranslateX = (index, circle) => {
-    if (windowWidth <= 750) {
+    if (windowWidth <= 400) {
+      return 145; // For very small screens (<= 450px)
+    } else if (windowWidth <= 450){
+      return 185; // For small screens (<= 550px)
+    } else if (windowWidth <= 750) {
       return 250; // For smaller screens (<= 750px)
     } else if (windowHeight <= 700) {
-      return 190; // For very small height (<= 750px)
+      return 180; // For very small height (<= 700px)
     } else if (windowHeight <= 850) {
       return 210; // For taller screens (<= 850px) but wide screens
     } else {
       return 240; // Default value for larger screens
     }
   };
-
+  
   const circleStyles = {
     transform: `rotate(${rotateAngle}deg)`,
     transition: 'transform 15s linear',
@@ -133,14 +136,11 @@ const Home = () => {
               <h1 className="head-text"><span2>BALATI<br />BALATI</span2></h1>
             </div>
           </div>
-
+        {/* <p className="p-text">Software Developer <br /></p>
+          <p className="p-text">Graphics Designer <br /></p>
+          <p className="p-text">AI Enthusiast <br /></p> */}
           
-          {/* <div className="tag-cmp app__flex">
-            <p className="p-text">Software Developer <br /></p>
-            <p className="p-text">Graphics Designer <br /></p>
-            <p className="p-text">AI Enthusiast <br /></p>
-          </div> */}
-
+          <div className="tag-cmp app__flex">
           <div className= 'Typewrite_Container'>
             <div className='typewrite_content'>
               {/* <span className='static-text'>I am a </span> */}
@@ -148,6 +148,9 @@ const Home = () => {
               <span className='cursor'>|</span>
             </div>
           </div>
+          </div>
+
+
         </div>
         
       </motion.div>
