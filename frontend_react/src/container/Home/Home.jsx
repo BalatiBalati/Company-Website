@@ -54,18 +54,12 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, [displayText, isDeleting, wordIndex]);
 
-
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+    };
     window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => setWindowHeight(window.innerHeight);
-    window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -73,7 +67,6 @@ const Home = () => {
     const interval = setInterval(() => {
       setRotateAngle((prevAngle) => prevAngle + 1);
     }, 16);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -94,19 +87,12 @@ const Home = () => {
   }, []);
 
   const getTranslateX = (index, circle) => {
-    if (windowWidth <= 400) {
-      return 145; // For very small screens (<= 450px)
-    } else if (windowWidth <= 450){
-      return 185; // For small screens (<= 550px)
-    } else if (windowWidth <= 750) {
-      return 250; // For smaller screens (<= 750px)
-    } else if (windowHeight <= 700) {
-      return 180; // For very small height (<= 700px)
-    } else if (windowHeight <= 850) {
-      return 210; // For taller screens (<= 850px) but wide screens
-    } else {
-      return 240; // Default value for larger screens
-    }
+    if (windowWidth <= 400) return 145;
+    if (windowWidth <= 450) return 185;
+    if (windowWidth <= 750) return 250;
+    if (windowHeight <= 700) return 180;
+    if (windowHeight <= 850) return 210;
+    return 240;
   };
   
   const circleStyles = {
@@ -114,55 +100,63 @@ const Home = () => {
     transition: 'transform 15s linear',
   };
 
+  const calculateOverlaySize = () => {
+    if (windowWidth <= 400) return 275;
+    if (windowWidth <= 750) return 370;
+    if (windowHeight <= 700) return 150;
+    if (windowHeight <= 850) return 200;
+    return 465;
+  };
+
+  const overlayCircleStyle = {
+    position: 'absolute',
+    width: `${calculateOverlaySize()}px`,
+    height: `${calculateOverlaySize()}px`,
+    borderRadius: '50%',
+    background: '#bec7d3',
+    zIndex: -5,
+    top: '50%',
+    left: '50%',
+    transform: `translate(-50%, -50%) rotate(${-rotateAngle}deg)`,
+    transition: 'all 0.3s ease',
+    boxShadow: '0 0 20px rgba(0,0,0,0.1)',
+
+  };
+
   return (
     <div className="app__header app__flex">
       <div className="app__header-bg">
-        <img className="app__header-bg-img" />
+        <img className="app__header-bg-img" alt="background" />
       </div>
-      <motion.div
-        whileInView={{ x: [0, 0], opacity: [1, 1] }}
-        transition={{ duration: 0 }}
-        className="app__header-info"
-      >
+      
+      <div className="app__header-info">
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
             {windowWidth > 750 && <span>👋🏽</span>}
-            <div
-              style={{
-                marginLeft: windowWidth < 750 ? -170 : 20, // Conditional margin
-              }}
-            >
+            <div style={{ marginLeft: windowWidth < 750 ? -170 : 20 }}>
               <p className="p-text">Hi there! My name is</p>
               <h1 className="head-text"><span2>BALATI<br />BALATI</span2></h1>
             </div>
           </div>
-        {/* <p className="p-text">Software Developer <br /></p>
-          <p className="p-text">Graphics Designer <br /></p>
-          <p className="p-text">AI Enthusiast <br /></p> */}
           
           <div className="tag-cmp app__flex">
-          <div className= 'Typewrite_Container'>
-            <div className='typewrite_content'>
-              {/* <span className='static-text'>I am a </span> */}
-              <span className='dynamic-text'><span>{displayText}</span></span>
-              <span className='cursor'>|</span>
+            <div className='Typewrite_Container'>
+              <div className='typewrite_content'>
+                <span className='dynamic-text'><span>{displayText}</span></span>
+                <span className='cursor'>|</span>
+              </div>
             </div>
           </div>
-          </div>
-
-
         </div>
-        
-      </motion.div>
-
+      </div>
 
       <div className="bottom-holder">
         <div className="image-holder">
           <img className='hero-image' src={images.profile} alt="profile_bg" />
-          <motion.div
-            className="app__header-circles"
-            style={circleStyles}
-          >
+          
+          <div className="app__header-circles" style={circleStyles}>
+            <div style={overlayCircleStyle} />
+            
             {circles.map((circle, index) => (
               <div
                 className="circle-cmp app__flex"
@@ -174,40 +168,35 @@ const Home = () => {
                   transform: `translate(-50%, -50%) rotate(${circle.angleOffset + index * 120}deg) translateX(${getTranslateX(index, circle)}px)`,
                 }}
               >
-                <motion.img
+                <img
                   src={circle.image}
                   alt="circle"
                   style={{
                     width:
-                    windowHeight < 700
-                      ? '40px'
-                      : windowHeight < 850
-                      ? '53px'
-                      : '60px', // Default
-                  height:
-                    windowHeight < 700
-                      ? '40px'
-                      : windowHeight < 850
-                      ? '53px'
-                      : '60px', // Default
+                      windowHeight < 700
+                        ? '40px'
+                        : windowHeight < 850
+                        ? '53px'
+                        : '60px',
+                    height:
+                      windowHeight < 700
+                        ? '40px'
+                        : windowHeight < 850
+                        ? '53px'
+                        : '60px',
                   }}
                 />
               </div>
             ))}
-          </motion.div>
-          <motion.div
-            whileInView={{ opacity: [1, 1] }}
-            transition={{ duration: 0}}
-            className="app__header-img"
-          >
-            <motion.img
-              whileInView={{ scale: [1, 1] }}
-              transition={{ duration: 0}}
+          </div>
+
+          {/* <div className="app__header-img">
+            <img
               src={images.circle}
               alt="profile_circle"
               className="overlay_circle"
             />
-          </motion.div>
+          </div> */}
         </div>
 
         <div className="app__new-section">
@@ -229,6 +218,5 @@ const Home = () => {
     </div>
   );
 };
-
 export default AppWrap(
   MotionWrap(Home, 'app__header app__flex'), 'home', 'app__primary');
