@@ -41,7 +41,7 @@ const Work = () => {
       title: "PacWars",
       description: "In this Star Wars-themed Pac-Man game, help R2-D2 navigate through the Death Star, avoiding enemies stormtroopers.",
       imgUrl: images.Pacman,
-      projectLink: "http://localhost:8000/",
+      projectLink: "https://balatibalati.com/PacWars-Game/",
       codeLink: "https://github.com/BalatiBalati/Python-PacWars_Game.git",
       tags: ["Game Development"],
     },

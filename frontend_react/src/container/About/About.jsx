@@ -20,7 +20,7 @@ const About = () => {
     },
     {
       _id: '3',
-      title: 'Digital Designer',
+      title: 'Digital Designing',
       imgUrl: images.Graphics_desgn, // Replace with your actual image path
       description: 'Specializing in creating dynamic motion graphics and visually compelling designs that elevate brands and enhance user experiences.',
     },

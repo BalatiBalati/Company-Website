@@ -103,7 +103,7 @@ const Home = () => {
   const calculateOverlaySize = () => {
     if (windowWidth <= 400) return 275;
     if (windowWidth <= 750) return 370;
-    if (windowHeight <= 700) return 150;
+    if (windowHeight <= 700) return 190;
     if (windowHeight <= 850) return 200;
     return 465;
   };
