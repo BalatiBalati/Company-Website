@@ -83,7 +83,7 @@ const Home = () => {
     };
 
     animateStats(3, 1000, 'partners');
-    animateStats(10, 1000, 'projects');
+    animateStats(5, 1000, 'projects');
   }, []);
 
   const getTranslateX = (index, circle) => {

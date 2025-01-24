@@ -49,7 +49,7 @@ const Work = () => {
       title: "FruitBot",
       description: "A fruit classification robotic arm, capable automatically detecting the type of fruit and its condition. (Rotten/Ripe)",
       imgUrl: images.Fruitbot,
-      projectLink: "https://example.com/project3",
+      projectLink: "https://youtube.com/shorts/wd28-1HIA5E?feature=share",
       codeLink: "https://github.com/BalatiBalati/FruitBot.git",
       tags: ["Robotics & Artificial Intelligence"],
     },
