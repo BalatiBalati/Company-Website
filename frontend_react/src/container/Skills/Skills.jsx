@@ -18,9 +18,8 @@ const Skills = () => {
           desc: 'Assisted in website designing and maintenance, videography and photography for the Mauritian based University',
         },
         {
-          name: 'UI Designer',
-          company: 'Creative Agency',
-          desc: 'Designed intuitive UI layouts for web applications.',
+          name: 'Freelance Development',
+          desc: 'Web development for local businesses and individuals',
         },
       ],
     },

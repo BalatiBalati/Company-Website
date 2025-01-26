@@ -82,7 +82,7 @@ const Home = () => {
       }, 16);
     };
 
-    animateStats(3, 1000, 'partners');
+    animateStats(3, 3000, 'partners');
     animateStats(5, 1000, 'projects');
   }, []);
 

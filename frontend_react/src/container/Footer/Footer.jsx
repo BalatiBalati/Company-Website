@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -7,9 +7,32 @@ import './Footer.scss';
 
 const Footer = () => {
   const form = useRef();
+  const [formData, setFormData] = useState({
+    user_name: '',
+    user_email: '',
+    message: '',
+  });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  useEffect(() => {
+    const isValidEmail = (email) =>
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); // Email validation regex
+    const { user_name, user_email, message } = formData;
+
+    setIsFormValid(
+      user_name.trim() !== '' &&
+      isValidEmail(user_email) &&
+      message.trim() !== ''
+    );
+  }, [formData]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,6 +50,7 @@ const Footer = () => {
         () => {
           setLoading(false);
           setIsFormSubmitted(true);
+          setFormData({ user_name: '', user_email: '', message: '' }); // Clear the form
         },
         (error) => {
           console.error('Failed to send message:', error.text);
@@ -34,6 +58,10 @@ const Footer = () => {
           setError('Error sending message. Please try again.');
         }
       );
+  };
+
+  const handleDismissMessage = () => {
+    setIsFormSubmitted(false);
   };
 
   return (
@@ -52,50 +80,67 @@ const Footer = () => {
         </div>
       </div>
 
-      {!isFormSubmitted ? (
-        <form ref={form} className="app__footer-form app__flex" onSubmit={sendEmail}>
-          <div className="app__flex">
-            <input
-              className="p-text"
-              type="text"
-              placeholder="Your Name"
-              name="user_name"
-              required
-            />
+      {isFormSubmitted && (
+        <div className="app__footer-thankyou">
+          <div className="thankyou-box">
+            <p className="thankyou-text">
+              Thank you for getting in touch!
+            </p>
+            <button className="dismiss-button" onClick={handleDismissMessage}>
+              Dismiss
+            </button>
           </div>
-          <div className="app__flex">
-            <input
-              className="p-text"
-              type="email"
-              placeholder="Your Email"
-              name="user_email"
-              required
-            />
-          </div>
-
-          <div>
-            <textarea
-              className="p-text"
-              placeholder="Your Message"
-              name="message"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="p-text"
-            disabled={loading}
-          >
-            {loading ? 'Sending...' : 'Send Message'}
-          </button>
-
-          {error && <p className="error-text">{error}</p>}
-        </form>
-      ) : (
-        <div>
-          <h3 className="head-text"><span>Thank You For Getting In Touch</span></h3>
         </div>
       )}
+
+      <form
+        ref={form}
+        className={`app__footer-form app__flex ${isFormSubmitted ? 'form-hidden' : ''}`}
+        onSubmit={sendEmail}
+      >
+        <div className="app__flex">
+          <input
+            className="p-text"
+            type="text"
+            placeholder="Your Name"
+            name="user_name"
+            value={formData.user_name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="app__flex">
+          <input
+            className="p-text"
+            type="email"
+            placeholder="Your Email"
+            name="user_email"
+            value={formData.user_email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div>
+          <textarea
+            className="p-text"
+            placeholder="Your Message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          className="p-text"
+          disabled={!isFormValid || loading}
+        >
+          {loading ? 'Sending...' : 'Send Message'}
+        </button>
+
+        {error && <p className="error-text">{error}</p>}
+      </form>
 
       <div className="app__footer-social">
         <SocialMedia />
