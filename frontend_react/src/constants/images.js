@@ -17,6 +17,8 @@ import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
 
+import X_TNGUISH from '../assets/X_TNGUISH.jpeg';
+
 import Graphics_desgn from '../assets/Graphics_desgn.png';
 import web_dev from '../assets/web_dev.png';
 import mobile_dev from '../assets/mobile_dev.png';
@@ -58,6 +60,7 @@ import illustrator from '../assets/illustrator.png';
 
 
 export default {
+    X_TNGUISH,
     illustrator,
     mysql,
     raspi,

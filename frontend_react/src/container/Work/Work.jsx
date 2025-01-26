@@ -53,6 +53,14 @@ const Work = () => {
       codeLink: "https://github.com/BalatiBalati/FruitBot.git",
       tags: ["Robotics & Artificial Intelligence"],
     },
+    {
+      title: "Fire Fighting Bot",
+      description: "The Fire-Fighting Robot is an autonomous robotic system designed to detect fires, navigate to the source, and extinguish them. ",
+      imgUrl: images.X_TNGUISH,
+      projectLink: "https://youtu.be/v2hdcv4jkng",
+      codeLink: "https://github.com/BalatiBalati/Fire-Fightong-Bot",
+      tags: ["Robotics & Artificial Intelligence"],
+    },
   ];
 
   const [filterWork, setFilterWork] = useState(works);
