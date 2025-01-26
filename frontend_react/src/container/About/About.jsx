@@ -29,9 +29,6 @@ const About = () => {
   return (
     
       <div className="app__about">
-        {/* <span> */}
-
-        {/* </span> */}
         <div className="app__rows">
 
         <h2 className="head-text">

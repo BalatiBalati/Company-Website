@@ -1,9 +1,8 @@
-.app__navbar{
+.app__navbar {
     width: 100%;
-
     display: flex;
-    justify-content: space-around;
-
+    justify-content: space-between; // Ensures logo left, menu right
+    align-items: center;
     padding-block: 1rem;
     background: rgba(255, 255, 255, 0.733);
     backdrop-filter: blur(4px);
@@ -11,11 +10,14 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 100000;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .app__navbar-logo{
     display: flex;
     justify-content: flex-start;
+    margin-right: auto; // Pushes links to the right
     align-items: center;
     z-index: 10000;
 
