@@ -135,6 +135,14 @@
         font-size: smaller;
       }
 
+      @media screen and (max-height: 650px){
+        p{
+          width: 150px;
+          font-size: small;
+        }
+        height: 180px;
+        font-size: smaller;
+      }
       
 
     }
@@ -158,21 +166,6 @@
           box-shadow: 0 0 20px rgba(53, 50, 50, 0);
         }
 
-        @media screen and (max-width: 750px) {
-          // padding: 0.5rem -25rem;
-          // //width: 600px;
-          // background: #9caeceb6;
-          // z-index: 1;
-          // position: relative;
-          // top: 32.5%;
-        }
-
-        @media screen and (max-height: 850px){
-          // width: 10%;
-          // height: 10%;
-        }
-
-
 
         @media screen and (max-width: 550px){
           position: relative;
@@ -184,12 +177,10 @@
         }
 
         @media screen and (max-width: 400px){
-          // width: 300px;
-          // height: 300px;
           position: relative;
           left: -35px;
           top: 0.5px;
-          // z-index: 15;
+
         }
     }
 
@@ -239,6 +230,10 @@
         
         @media screen and (max-width: 550px) {
           font-size: 1.5rem;
+        }
+
+        @media screen and (max-height: 650px){
+          font-size: 1.0rem;
         }
     }
 
@@ -625,17 +620,13 @@
   .app__new-section {
     width: 100vw;
     position: relative;
-    /* display: block; */
+
     left: 0%;
     bottom: 0;
     height: 212px;
     padding: 1.5rem 2rem;
     z-index: 100231;
-    /* Colors: 
-       00003b - blue 
-       edf2f8 - gray 
-       #070777
-    */
+
     background: linear-gradient(to bottom, #d2d9e3 30%, #d2d9e3 60%); /* Solid blue background */
     border-radius: 15px 15px 0 0; /* Rounded top corners */
     text-align: center; /* Center align text */
@@ -652,6 +643,14 @@
       height: 215px;
     }
 
+    // ----------- Cooooooome Baaaaaaaack ----------------
+    @media screen and (max-height: 650px){
+      bottom: 0;
+      height: 160px;
+      padding: 1rem 2rem;
+    }
+    // ----------- Cooooooome Baaaaaaaack ----------------
+
     @media screen and (max-width: 450px){
       height: 190px;
     }
@@ -660,6 +659,12 @@
       font-size: 2.5rem;
       font-weight: bold;
       color: #0264ce; // Darker text
+
+      @media screen and (max-height: 650px) {
+        margin-bottom: -0.5rem;
+        font-size: 2.0rem;
+        
+      }
     }
 
     .app__stats {
@@ -688,12 +693,22 @@
                     font-weight: bold;
                     color: #363636;
                     margin-bottom: 0.5rem;
+
+                    @media screen and (max-height: 650px) {
+                      font-size: 1.0rem;
+                      margin-bottom: 0rem;
+                    }
                 }
 
                 .stats-number {
                     font-size: 2.5rem;
                     font-weight: bold;
                     color: #0264ce;
+
+                    @media screen and (max-height: 650px) {
+                      font-size: 2.0rem;
+                      
+                    }
                 }
             }
         }

@@ -126,7 +126,7 @@ const Home = () => {
   return (
     <div className="app__header app__flex">
       <div className="app__header-bg">
-        <img className="app__header-bg-img" alt="background" />
+        <img className="app__header-bg-img" />
       </div>
       
       <div className="app__header-info">
