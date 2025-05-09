@@ -31,10 +31,10 @@ const Work = () => {
   const works = [
     {
       title: "100fold Publishing",
-      description: "A rhythm-based 3D flight game developed in Unity, challenging you to maneuver through a musical universe with grace and finesse.",
-      imgUrl: images.dd2,
+      description: "A perfectly designed react based website application for a translation and publishing company, showcasing their books and authors, along with other services offered.",
+      imgUrl: images.Fold100,
       projectLink: "https://www.100foldpublishing.com/",
-      codeLink: "https://drive.google.com/drive/folders/1XzsXmb8UNrGh0XYAzomzk5XRMkzF4t6e?usp=drive_link",
+      // codeLink: "https://drive.google.com/drive/folders/1XzsXmb8UNrGh0XYAzomzk5XRMkzF4t6e?usp=drive_link",
       tags: ["Website Applications"],
     },
     {
