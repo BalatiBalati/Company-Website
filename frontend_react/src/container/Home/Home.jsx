@@ -82,8 +82,8 @@ const Home = () => {
       }, 16);
     };
 
-    animateStats(1, 3000, 'partners');
-    animateStats(4, 1000, 'projects');
+    animateStats(1, 1000, 'partners');
+    animateStats(5, 1000, 'projects');
   }, []);
 
   const getTranslateX = (index, circle) => {
