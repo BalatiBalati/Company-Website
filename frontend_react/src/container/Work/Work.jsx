@@ -31,10 +31,10 @@ const Work = () => {
   const works = [
     {
       title: "Digital Dash",
-      description: "A rhythm-based 3D flight game developed in Unity, challenging you to maneuver through a musical universe with grace and finesse.",
+      description: "Are you and Android user? Then download the APK and join the fun in this amazing Unity Developed, rhythm-based 3D flight. Maneuver through a musical universe with grace and finesse.",
       imgUrl: images.dd2,
-      projectLink: "https://drive.google.com/drive/folders/1FFqls4PxypWgmW_r2xBaOwkHz8hA6mx5?usp=drive_link",
-      codeLink: "https://drive.google.com/drive/folders/1XzsXmb8UNrGh0XYAzomzk5XRMkzF4t6e?usp=drive_link",
+      projectLink: "https://github.com/BalatiBalati/Digital-Dash/releases/tag/digital_dash",
+      codeLink: "https://github.com/BalatiBalati/Digital-Dash.git",
       tags: ["Game Development"],
     },
     {
