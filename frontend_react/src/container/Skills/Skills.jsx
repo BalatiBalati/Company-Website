@@ -90,7 +90,7 @@ const Skills = () => {
       name: 'C-Sharp',
       bgColor: '#3498db',
       icon: images.c_sharp,
-      level: 48,
+      level: 62,
     },
     {
       name: 'Git',
