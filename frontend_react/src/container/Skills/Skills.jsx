@@ -10,7 +10,7 @@ const Skills = () => {
   // Static data to replace backend data
   const experience = [
     {
-      year: '2024 - Present',
+      year: '2024 - 2025',
       works: [
         {
           name: 'Digital Intern',
@@ -47,7 +47,7 @@ const Skills = () => {
       year: '2016',
       works: [
         {
-          name: 'Animations Specialist',
+          name: 'Animations & Game Development Specialist',
           company: 'Tanzania Bora Initiative',
           desc: 'Scripted, story boarded, designed and created animations aimed at advocating for equality',
         },
