@@ -30,6 +30,14 @@ const Work = () => {
   
   const works = [
     {
+      title: "100fold Publishing",
+      description: "A rhythm-based 3D flight game developed in Unity, challenging you to maneuver through a musical universe with grace and finesse.",
+      imgUrl: images.dd2,
+      projectLink: "https://www.100foldpublishing.com/",
+      codeLink: "https://drive.google.com/drive/folders/1XzsXmb8UNrGh0XYAzomzk5XRMkzF4t6e?usp=drive_link",
+      tags: ["Website Applications"],
+    },
+    {
       title: "Digital Dash",
       description: "A rhythm-based 3D flight game developed in Unity, challenging you to maneuver through a musical universe with grace and finesse.",
       imgUrl: images.dd2,

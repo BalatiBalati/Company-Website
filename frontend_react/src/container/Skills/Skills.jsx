@@ -10,16 +10,22 @@ const Skills = () => {
   // Static data to replace backend data
   const experience = [
     {
+      year: '2025 - Present',
+      works: [
+        {
+          name: 'Software Engineer',
+          company: '100fold Publishing',
+          desc: 'Part time software engineer, working on the development and maintenance of the company\'s website and mobile application.',
+        },
+      ],
+    },
+    {
       year: '2024 - 2025',
       works: [
         {
           name: 'Digital Intern',
           company: 'Middlesex University',
           desc: 'Assisted in website designing and maintenance, videography and photography for the Mauritian based University',
-        },
-        {
-          name: 'Freelance Development',
-          desc: 'Web development for local businesses and individuals',
         },
       ],
     },

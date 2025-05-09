@@ -17,6 +17,8 @@ import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
 
+import Fold100 from '../assets/Fold100.png';
+
 import X_TNGUISH from '../assets/X_TNGUISH.jpeg';
 
 import Graphics_desgn from '../assets/Graphics_desgn.png';
@@ -62,6 +64,7 @@ import illustrator from '../assets/illustrator.png';
 import unity_logo from '../assets/unity_logo.jpeg';
 
 export default {
+    Fold100,
     unity_logo,
     dd2,
     X_TNGUISH,
