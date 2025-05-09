@@ -30,12 +30,12 @@ const Work = () => {
   
   const works = [
     {
-      title: "Online Tutor",
-      description: "A Vue JS online tutor website application created for Mauritian primary students.",
+      title: "Digital Dash",
+      description: "A rhythm-based flight game developed in Unity, challenging you to maneuver through a musical universe with grace and finesse.",
       imgUrl: images.Tutor,
-      projectLink: "https://balatibalati.github.io/TuitionApp/",
+      projectLink: "https://drive.google.com/drive/folders/1FFqls4PxypWgmW_r2xBaOwkHz8hA6mx5?usp=drive_link",
       codeLink: "https://github.com/BalatiBalati/TuitionApp.git",
-      tags: ["Website Applications"],
+      tags: ["Game Development"],
     },
     {
       title: "PacWars",
