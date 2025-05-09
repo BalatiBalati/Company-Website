@@ -30,14 +30,6 @@ const Work = () => {
   
   const works = [
     {
-      title: "100fold Publishing",
-      description: "A perfectly designed react based website application for a translation and publishing company, showcasing their books and authors, along with other services offered.",
-      imgUrl: images.Fold100,
-      projectLink: "https://www.100foldpublishing.com/",
-      // codeLink: "https://drive.google.com/drive/folders/1XzsXmb8UNrGh0XYAzomzk5XRMkzF4t6e?usp=drive_link",
-      tags: ["Website Applications"],
-    },
-    {
       title: "Digital Dash",
       description: "A rhythm-based 3D flight game developed in Unity, challenging you to maneuver through a musical universe with grace and finesse.",
       imgUrl: images.dd2,
@@ -52,6 +44,14 @@ const Work = () => {
       projectLink: "https://balatibalati.com/PacWars-Game/",
       codeLink: "https://github.com/BalatiBalati/Python-PacWars_Game.git",
       tags: ["Game Development"],
+    },
+    {
+      title: "100Fold Publishing",
+      description: "A perfectly designed react based website application for a translation and publishing company, showcasing their books, authors, along with other services offered.",
+      imgUrl: images.Fold100,
+      projectLink: "https://www.100foldpublishing.com/",
+      // codeLink: "https://drive.google.com/drive/folders/1XzsXmb8UNrGh0XYAzomzk5XRMkzF4t6e?usp=drive_link",
+      tags: ["Website Applications"],
     },
     {
       title: "FruitBot",
