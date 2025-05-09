@@ -59,8 +59,10 @@ import pytorch from '../assets/pytorch.png';
 import arduino from '../assets/arduino.png';
 import illustrator from '../assets/illustrator.png';
 
+import unity_logo from '../assets/unity_logo.jpeg';
 
 export default {
+    unity_logo,
     dd2,
     X_TNGUISH,
     illustrator,

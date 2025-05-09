@@ -141,10 +141,10 @@ const Skills = () => {
       level: 74,
     },
     {
-      name: 'Illustrator',
+      name: 'Unity',
       bgColor: '#3498db',
-      icon: images.illustrator || 'https://path-to-placeholder-image.png', // Fallback for missing image
-      level: 21,
+      icon: images.unity_logo,
+      level: 78,
     },
   ];
 
