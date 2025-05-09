@@ -31,7 +31,7 @@ const Work = () => {
   const works = [
     {
       title: "Digital Dash",
-      description: "Are you and Android user? Then download the APK and join the fun in this amazing Unity Developed, rhythm-based 3D flight. Maneuver through a musical universe with grace and finesse.",
+      description: "Are you an Android user? Then download the APK and join the fun in this amazing Unity Developed, rhythm-based 3D flight. Maneuver through a musical universe with grace and finesse.",
       imgUrl: images.dd2,
       projectLink: "https://github.com/BalatiBalati/Digital-Dash/releases/tag/digital_dash",
       codeLink: "https://github.com/BalatiBalati/Digital-Dash.git",
