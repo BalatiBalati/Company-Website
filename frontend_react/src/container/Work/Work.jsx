@@ -31,8 +31,8 @@ const Work = () => {
   const works = [
     {
       title: "Digital Dash",
-      description: "A rhythm-based flight game developed in Unity, challenging you to maneuver through a musical universe with grace and finesse.",
-      imgUrl: images.Tutor,
+      description: "A rhythm-based 3D flight game developed in Unity, challenging you to maneuver through a musical universe with grace and finesse.",
+      imgUrl: images.dd2,
       projectLink: "https://drive.google.com/drive/folders/1FFqls4PxypWgmW_r2xBaOwkHz8hA6mx5?usp=drive_link",
       codeLink: "https://drive.google.com/drive/folders/1XzsXmb8UNrGh0XYAzomzk5XRMkzF4t6e?usp=drive_link",
       tags: ["Game Development"],

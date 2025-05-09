@@ -32,6 +32,7 @@ import Chipukzi from '../assets/Chipukzi.png';
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 
+import dd2 from '../assets/dd2.png';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -60,6 +61,7 @@ import illustrator from '../assets/illustrator.png';
 
 
 export default {
+    dd2,
     X_TNGUISH,
     illustrator,
     mysql,

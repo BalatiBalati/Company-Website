@@ -47,7 +47,7 @@ const Skills = () => {
       year: '2016',
       works: [
         {
-          name: 'Animations & Game Development Specialist',
+          name: 'Animations & Unity Game Development Specialist',
           company: 'Tanzania Bora Initiative',
           desc: 'Scripted, story boarded, designed and created animations aimed at advocating for equality',
         },
