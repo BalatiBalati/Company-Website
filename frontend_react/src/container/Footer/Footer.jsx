@@ -146,7 +146,7 @@ const Footer = () => {
         <SocialMedia />
 
         <div className="copyright">
-          <p className="p-text"><span>Copyright © 2024 BALATI BALATI</span></p>
+          <p className="p-text"><span>Copyright © 2025 BALATI BALATI</span></p>
           <p className="p-text"><span>All Rights Reserved</span></p>
         </div>
       </div>
